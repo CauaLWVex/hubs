@@ -17,9 +17,9 @@ export function PWAButton() {
         <IconButton className={styles.pwaButton} lg onClick={installPWA}>
           <AddIcon width={16} height={16} />
           {isMobile ? (
-            <FormattedMessage id="pwa-button.mobile" defaultMessage="Add to Home Screen" />
+            <FormattedMessage id="pwa-button.mobile" defaultMessage="Adicionar à Tela Inicial" />
           ) : (
-            <FormattedMessage id="pwa-button.desktop" defaultMessage="Install Desktop App" />
+            <FormattedMessage id="pwa-button.desktop" defaultMessage="Instalar Aplicativo para Desktop" />
           )}
         </IconButton>
       )}

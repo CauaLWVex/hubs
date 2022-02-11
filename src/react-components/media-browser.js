@@ -31,101 +31,101 @@ const PRIVACY_POLICY_LINKS = {
 
 const DEFAULT_FACETS = {
   sketchfab: [
-    { text: "Featured", params: { filter: "featured" } },
-    { text: "Animals", params: { filter: "animals-pets" } },
-    { text: "Architecture", params: { filter: "architecture" } },
-    { text: "Art", params: { filter: "art-abstract" } },
-    { text: "Vehicles", params: { filter: "cars-vehicles" } },
-    { text: "Characters", params: { filter: "characters-creatures" } },
-    { text: "Culture", params: { filter: "cultural-heritage-history" } },
-    { text: "Gadgets", params: { filter: "electronics-gadgets" } },
-    { text: "Fashion", params: { filter: "fashion-style" } },
-    { text: "Food", params: { filter: "food-drink" } },
-    { text: "Furniture", params: { filter: "furniture-home" } },
-    { text: "Music", params: { filter: "music" } },
-    { text: "Nature", params: { filter: "nature-plants" } },
-    { text: "News", params: { filter: "news-politics" } },
-    { text: "People", params: { filter: "people" } },
-    { text: "Places", params: { filter: "places-travel" } },
-    { text: "Science", params: { filter: "science-technology" } },
-    { text: "Sports", params: { filter: "sports-fitness" } },
-    { text: "Weapons", params: { filter: "weapons-military" } }
+    { text: "Destaques", params: { filter: "featured" } },
+    { text: "Animais", params: { filter: "animals-pets" } },
+    { text: "Arquitetura", params: { filter: "architecture" } },
+    { text: "Arte", params: { filter: "art-abstract" } },
+    { text: "Veículos", params: { filter: "cars-vehicles" } },
+    { text: "Personagens", params: { filter: "characters-creatures" } },
+    { text: "Cultura", params: { filter: "cultural-heritage-history" } },
+    { text: "Aparelhos", params: { filter: "electronics-gadgets" } },
+    { text: "Moda", params: { filter: "fashion-style" } },
+    { text: "Comida", params: { filter: "food-drink" } },
+    { text: "Móveis", params: { filter: "furniture-home" } },
+    { text: "Música", params: { filter: "music" } },
+    { text: "Natureza", params: { filter: "nature-plants" } },
+    { text: "Notícias", params: { filter: "news-politics" } },
+    { text: "Pessoas", params: { filter: "people" } },
+    { text: "Lugares", params: { filter: "places-travel" } },
+    { text: "Ciência", params: { filter: "science-technology" } },
+    { text: "Esportes", params: { filter: "sports-fitness" } },
+    { text: "Armas", params: { filter: "weapons-military" } }
   ],
   avatars: [
-    { text: "Featured", params: { filter: "featured" } },
-    { text: "My Avatars", params: { filter: "my-avatars" } },
-    { text: "Newest", params: { filter: "" } }
+    { text: "Destaque", params: { filter: "featured" } },
+    { text: "Meus Avatares", params: { filter: "my-avatars" } },
+    { text: "Mais Novos", params: { filter: "" } }
   ],
   favorites: [],
-  scenes: [{ text: "Featured", params: { filter: "featured" } }, { text: "My Scenes", params: { filter: "my-scenes" } }]
+  scenes: [{ text: "Destaques", params: { filter: "featured" } }, { text: "Minhas Cenas", params: { filter: "my-scenes" } }]
 };
 
 const poweredByMessages = defineMessages({
   images: {
     id: "media-browser.powered_by.images",
-    defaultMessage: "Search by Bing"
+    defaultMessage: "Pesquisar no Bing"
   },
   videos: {
     id: "media-browser.powered_by.videos",
-    defaultMessage: "Search by Bing"
+    defaultMessage: "Pesquisar no Bing"
   },
   youtube: {
     id: "media-browser.powered_by.youtube",
-    defaultMessage: "Search by Google"
+    defaultMessage: "Pesquisar no Google"
   },
   gifs: {
     id: "media-browser.powered_by.gifs",
-    defaultMessage: "Search by Tenor"
+    defaultMessage: "Pesquisar no Tenor"
   },
   sketchfab: {
     id: "media-browser.powered_by.sketchfab",
-    defaultMessage: "Search by Sketchfab"
+    defaultMessage: "Pesquisar no Sketchfab"
   },
   twitch: {
     id: "media-browser.powered_by.twitch",
-    defaultMessage: "Search by Twitch"
+    defaultMessage: "Pesquisar no Twitch"
   },
   scenes: {
     id: "media-browser.powered_by.scenes",
-    defaultMessage: "Made with {editorName}"
+    defaultMessage: "Feito com {editorName}"
   }
 });
 
 const customObjectMessages = defineMessages({
   object: {
     id: "media-browser.add_custom_object",
-    defaultMessage: "Custom URL or File"
+    defaultMessage: "Link ou arquivo personalizado"
   },
   scene: {
     id: "media-browser.add_custom_scene",
-    defaultMessage: "Custom Scene"
+    defaultMessage: "Cena personalizada"
   },
   avatar: {
     id: "media-browser.add_custom_avatar",
-    defaultMessage: "Avatar GLB URL"
+    defaultMessage: "Link de Avatar GLB"
   }
 });
 
 const searchPlaceholderMessages = defineMessages({
-  scenes: { id: "media-browser.search-placeholder.scenes", defaultMessage: "Search Scenes..." },
-  avatars: { id: "media-browser.search-placeholder.avatars", defaultMessage: "Search Avatars..." },
-  videos: { id: "media-browser.search-placeholder.videos", defaultMessage: "Search for Videos..." },
-  images: { id: "media-browser.search-placeholder.images", defaultMessage: "Search for Images..." },
-  youtube: { id: "media-browser.search-placeholder.youtube", defaultMessage: "Search for Youtube videos..." },
-  gifs: { id: "media-browser.search-placeholder.gifs", defaultMessage: "Search for GIFs..." },
-  twitch: { id: "media-browser.search-placeholder.twitch", defaultMessage: "Search for Twitch streams..." },
-  sketchfab: { id: "media-browser.search-placeholder.sketchfab", defaultMessage: "Search Sketchfab Models..." },
-  default: { id: "media-browser.search-placeholder.default", defaultMessage: "Search..." }
+  scenes: { id: "media-browser.search-placeholder.scenes", defaultMessage: "Pesquisar Cenas..." },
+  avatars: { id: "media-browser.search-placeholder.avatars", defaultMessage: "Pesquisar Avatares..." },
+  videos: { id: "media-browser.search-placeholder.videos", defaultMessage: "Pesquisar Videos..." },
+  images: { id: "media-browser.search-placeholder.images", defaultMessage: "Pesquisar Imagens..." },
+  youtube: { id: "media-browser.search-placeholder.youtube", defaultMessage: "Pesquisar videos do Youtube..." },
+  gifs: { id: "media-browser.search-placeholder.gifs", defaultMessage: "Pesquisar GIFs..." },
+  twitch: { id: "media-browser.search-placeholder.twitch", defaultMessage: "Pesquisar lives da Twitch..." },
+  sketchfab: { id: "media-browser.search-placeholder.sketchfab", defaultMessage: "Pesquisar Modelos Sketchfab..." },
+  default: { id: "media-browser.search-placeholder.default", defaultMessage: "Pesquisar..." }
 });
 
 const emptyMessages = defineMessages({
   favorites: {
     id: "media-browser.empty.favorites",
-    defaultMessage: "You don't have any favorites. Click a ⭐ to add to your favorites."
+    defaultMessage: "Você não tem nenhum favorito. Clique na ⭐ para adicionar aos seus favoritos."
   },
   default: {
     id: "media-browser.empty.default",
-    defaultMessage: "No results. Try entering a new search above."
+    defaultMessage: "Nenhum resultado. Tente inserir uma nova pesquisa acima."
   }
 });
 
@@ -394,7 +394,7 @@ class MediaBrowserContainer extends Component {
           {poweredByMessages[urlSource] && PRIVACY_POLICY_LINKS[urlSource] ? " | " : ""}
           {PRIVACY_POLICY_LINKS[urlSource] && (
             <a href={PRIVACY_POLICY_LINKS[urlSource]} target="_blank" rel="noreferrer noopener">
-              <FormattedMessage id="media-browser.privacy_policy" defaultMessage="Privacy Policy" />
+              <FormattedMessage id="media-browser.privacy_policy" defaultMessage="Política de Privacidade" />
             </a>
           )}
         </>
@@ -420,7 +420,7 @@ class MediaBrowserContainer extends Component {
               rel="noopener noreferrer"
               href={configs.link("issue_report", "https://hubs.mozilla.com/docs/help.html")}
             >
-              <FormattedMessage id="media-browser.report-issue" defaultMessage="Report Issue" />
+              <FormattedMessage id="media-browser.report-issue" defaultMessage="Reportar Problema" />
             </a>
           )}
         </>
@@ -489,7 +489,7 @@ class MediaBrowserContainer extends Component {
               <CreateTile
                 type="avatar"
                 onClick={this.onCreateAvatar}
-                label={<FormattedMessage id="media-browser.create-avatar" defaultMessage="Create Avatar" />}
+                label={<FormattedMessage id="media-browser.create-avatar" defaultMessage="Criar Avatar" />}
               />
             )}
             {urlSource === "scenes" &&
@@ -503,7 +503,7 @@ class MediaBrowserContainer extends Component {
                   label={
                     <FormattedMessage
                       id="media-browser.create-scene"
-                      defaultMessage="Create Scene with {editorName}"
+                      defaultMessage="Criar cena com {editorName}"
                       values={{ editorName: configs.translation("editor-name") }}
                     />
                   }

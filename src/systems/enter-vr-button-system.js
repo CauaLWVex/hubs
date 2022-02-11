@@ -23,7 +23,7 @@ export class EnterVRButtonSystem {
       configs.feature("enable_lobby_ghosts") &&
       uiRoot &&
       uiRoot.firstChild &&
-      (uiRoot.firstChild.classList.contains("isGhost") && !uiRoot.firstChild.classList.contains("hide"));
+      (uiRoot.firstChild.classList.contains("isGhost") && !uiRoot.firstChild.classList.contains("esconder"));
     if (enable && !this.enabled) {
       this.enableButton();
     } else if (this.enabled && !enable) {

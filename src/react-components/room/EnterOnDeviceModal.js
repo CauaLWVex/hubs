@@ -23,7 +23,7 @@ export function EnterOnDeviceModal({
 
   return (
     <Modal
-      title={<FormattedMessage id="enter-on-device-modal.title" defaultMessage="Enter on Device" />}
+      title={<FormattedMessage id="enter-on-device-modal.title" defaultMessage="Entrar em VR" />}
       beforeTitle={<BackButton onClick={onBack} />}
       className={className}
       {...rest}
@@ -31,24 +31,24 @@ export function EnterOnDeviceModal({
       <Column center={loadingCode ? "both" : true} padding grow>
         {loadingCode ? (
           <b>
-            <FormattedMessage id="enter-on-device-modal.generating-code" defaultMessage="Generating join code..." />
+            <FormattedMessage id="enter-on-device-modal.generating-code" defaultMessage="Gerando código de entrada..." />
           </b>
         ) : (
           <>
             <b>
-              <FormattedMessage id="enter-on-device-modal.heading" defaultMessage="Enter on Wireless Headset / Phone" />
+              <FormattedMessage id="enter-on-device-modal.heading" defaultMessage="Entrar em Headset Sem Fio / Celular" />
             </b>
             <small>
               <FormattedMessage
                 id="enter-on-device-modal.short-url-directions"
-                defaultMessage="In your device's web browser, go to:"
+                defaultMessage="No navegador do seu dispositivo, vá para:"
               />
             </small>
             <div className={styles.shortUrlContainer}>{shortUrl}</div>
             <small>
               <FormattedMessage
                 id="enter-on-device-modal.code-directions"
-                defaultMessage="Then, enter this one-time code:"
+                defaultMessage="Então, insira este código único:"
               />
             </small>
             <div className={styles.codeContainer}>
@@ -61,24 +61,24 @@ export function EnterOnDeviceModal({
             <strong>
               <FormattedMessage
                 id="enter-on-device-modal.data-transfer"
-                defaultMessage="Your account and avatar will be transferred to the device."
+                defaultMessage="Sua conta e avatar serão transferidos para o dispositivo."
               />
             </strong>
             <strong>
               <FormattedMessage
                 id="enter-on-device-modal.keep-page-open"
-                defaultMessage="Keep this page open to use this code."
+                defaultMessage="Mantenha esta página aberta para usar este código."
               />
             </strong>
             {headsetConnected && (
               <>
                 <hr
-                  data-or-text={intl.formatMessage({ id: "enter-on-device-modal.divider-label", defaultMessage: "or" })}
+                  data-or-text={intl.formatMessage({ id: "enter-on-device-modal.divider-label", defaultMessage: "ou" })}
                 />
                 <b>
                   <FormattedMessage
                     id="enter-on-device-modal.headset-connected-heading"
-                    defaultMessage="Enter on Connected Headset"
+                    defaultMessage="Entre no Headset Conectado"
                   />
                 </b>
                 {unsupportedBrowser ? (
@@ -86,7 +86,7 @@ export function EnterOnDeviceModal({
                     <small>
                       <FormattedMessage
                         id="enter-on-device-modal.unsupported-browser"
-                        defaultMessage="WebVR isn't supported in this browser, to enter with Oculus or SteamVR, use Firefox."
+                        defaultMessage="WebVR não é suportado neste navegador, para entrar com Oculus ou SteamVR, use o Firefox."
                       />
                     </small>
                     <Button
@@ -99,7 +99,7 @@ export function EnterOnDeviceModal({
                       <span>
                         <FormattedMessage
                           id="enter-on-device-modal.download-firefox-button"
-                          defaultMessage="Download Firefox"
+                          defaultMessage="Baixe o Firefox"
                         />
                       </span>
                     </Button>
@@ -109,13 +109,13 @@ export function EnterOnDeviceModal({
                     <small>
                       <FormattedMessage
                         id="enter-on-device-modal.headset-connected-message"
-                        defaultMessage="You have a VR headset connected to this device."
+                        defaultMessage="Você tem um headset VR conectado à este dispositivo."
                       />
                     </small>
                     <Button preset="accent5" onClick={onEnterOnConnectedHeadset}>
                       <VRIcon />
                       <span>
-                        <FormattedMessage id="enter-on-device-modal.enter-in-vr-button" defaultMessage="Enter in VR" />
+                        <FormattedMessage id="enter-on-device-modal.enter-in-vr-button" defaultMessage="Entre no VR" />
                       </span>
                     </Button>
                   </>

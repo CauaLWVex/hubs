@@ -15,30 +15,30 @@ export const LeaveReason = {
 const reasonMessages = defineMessages({
   [LeaveReason.leaveRoom]: {
     id: "leave-room-modal.leave-room.message",
-    defaultMessage: "Are you sure you want to leave the room?"
+    defaultMessage: "Você tem certeza que quer sair da sala?"
   },
   [LeaveReason.joinRoom]: {
     id: "leave-room-modal.join-room.message",
-    defaultMessage: "Joining a new room will leave this one. Are you sure?"
+    defaultMessage: "Entrar em uma nova sala irá sair desta. Você tem certeza?"
   },
   [LeaveReason.createRoom]: {
     id: "leave-room-modal.create-room.message",
-    defaultMessage: "Creating a new room will leave this one. Are you sure?"
+    defaultMessage: "Criar uma nova sala irá sair desta. Você tem certeza?"
   }
 });
 
 const confirmationMessages = defineMessages({
   [LeaveReason.leaveRoom]: {
     id: "leave-room-modal.leave-room.confirm",
-    defaultMessage: "Leave Room"
+    defaultMessage: "Sair da Sala"
   },
   [LeaveReason.joinRoom]: {
     id: "leave-room-modal.join-room.confirm",
-    defaultMessage: "Join Room"
+    defaultMessage: "Entrar na Sala"
   },
   [LeaveReason.createRoom]: {
     id: "leave-room-modal.create-room.confirm",
-    defaultMessage: "Leave and Create Room"
+    defaultMessage: "Sair e Criar Sala"
   }
 });
 
@@ -47,7 +47,7 @@ export function LeaveRoomModal({ reason, destinationUrl, onClose }) {
 
   return (
     <Modal
-      title={<FormattedMessage id="leave-room-modal.title" defaultMessage="Leave Room" />}
+      title={<FormattedMessage id="leave-room-modal.title" defaultMessage="Sair da Sala" />}
       beforeTitle={<CloseButton onClick={onClose} />}
     >
       <Column padding center centerMd="both" grow>

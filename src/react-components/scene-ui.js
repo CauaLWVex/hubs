@@ -62,7 +62,7 @@ class SceneUI extends Component {
         <div className={styles.ui}>
           <div className={styles.unavailable}>
             <div>
-              <FormattedMessage id="scene-page.unavailable" defaultMessage="This scene is no longer available." />
+              <FormattedMessage id="scene-page.unavailable" defaultMessage="Esta cena não está mais disponível." />
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ class SceneUI extends Component {
     const tweetText = intl.formatMessage(
       {
         id: "scene-page.default-tweet",
-        defaultMessage: "{sceneName} in {shareHashtag}"
+        defaultMessage: "{sceneName} em {shareHashtag}"
       },
       {
         sceneName: this.props.sceneName,
@@ -86,7 +86,7 @@ class SceneUI extends Component {
       tweetText
     )}`;
 
-    const unknown = intl.formatMessage({ id: "scene-page.unknown", defaultMessage: "unknown" });
+    const unknown = intl.formatMessage({ id: "scene-page.unknown", defaultMessage: "desconhecido" });
 
     let attributions;
 
@@ -106,7 +106,7 @@ class SceneUI extends Component {
         <span className="remix">
           <FormattedMessage
             id="scene-page.remix-attribution"
-            defaultMessage="(Remixed from <a>{name} by {author}</a>)"
+            defaultMessage="(Alterado de <a>{name} por {author}</a>)"
             values={{
               name: _name,
               author: _author,
@@ -126,7 +126,7 @@ class SceneUI extends Component {
           <span key={url}>
             <FormattedMessage
               id="scene-page.attribution-with-source"
-              defaultMessage="<a>{name} by {author} on {source}</a>"
+              defaultMessage="<a>{name} por {author} em {source}</a>"
               values={{
                 name: _name,
                 author: _author,
@@ -148,7 +148,7 @@ class SceneUI extends Component {
           <span key={`${_name} ${_author}`}>
             <FormattedMessage
               id="scene-page.attribution"
-              defaultMessage="<a>{name} by {author}</a>"
+              defaultMessage="<a>{name} por {author}</a>"
               values={{
                 name: _name,
                 author: _author,
@@ -175,7 +175,7 @@ class SceneUI extends Component {
               {this.props.sceneAttributions.creator ? (
                 <FormattedMessage
                   id="scene-page.scene-attribution"
-                  defaultMessage="by {creator}"
+                  defaultMessage="por {creator}"
                   values={{ creator: this.props.sceneAttributions.creator || unknown }}
                 />
               ) : (
@@ -229,7 +229,7 @@ class SceneUI extends Component {
             {this.props.showCreateRoom && (
               <div className={styles.createButtons}>
                 <button className={styles.createButton} onClick={this.createRoom}>
-                  <FormattedMessage id="scene-page.create-button" defaultMessage="Create a room with this scene" />
+                  <FormattedMessage id="scene-page.create-button" defaultMessage="Criar uma sala com esta cena" />
                 </button>
               </div>
             )}
@@ -244,7 +244,7 @@ class SceneUI extends Component {
                   <FontAwesomeIcon icon={faPencilAlt} />
                   <FormattedMessage
                     id="scene-page.edit-button"
-                    defaultMessage="Edit in {editorName}"
+                    defaultMessage="Editar em {editorName}"
                     values={{ editorName: configs.translation("editor-name") }}
                   />
                 </a>
@@ -259,7 +259,7 @@ class SceneUI extends Component {
                     <FontAwesomeIcon icon={faCodeBranch} />
                     <FormattedMessage
                       id="scene-page.remix-button"
-                      defaultMessage="Remix in {editorName}"
+                      defaultMessage="Editar em {editorName}"
                       values={{ editorName: configs.translation("editor-name") }}
                     />
                   </a>
@@ -269,7 +269,7 @@ class SceneUI extends Component {
             <a href={tweetLink} rel="noopener noreferrer" target="_blank" className={styles.tweetButton}>
               <img src="../assets/images/twitter.svg" />
               <div>
-                <FormattedMessage id="scene-page.tweet-button" defaultMessage="Share on Twitter" />
+                <FormattedMessage id="scene-page.tweet-button" defaultMessage="Compartilhar no Twitter" />
               </div>
             </a>
           </div>
@@ -283,7 +283,7 @@ class SceneUI extends Component {
             <div className={styles.madeWith}>
               <FormattedMessage
                 id="scene-page.made-with"
-                defaultMessage="made with <a/>"
+                defaultMessage="feito por <a/>"
                 values={{
                   a: () => (
                     <a href="/spoke">

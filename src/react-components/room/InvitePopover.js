@@ -19,17 +19,17 @@ function InvitePopoverContent({ url, shortUrl, code, embed, inviteRequired, fetc
       ) : (
         <>
           <CopyableTextInputField
-            label={<FormattedMessage id="invite-popover.room-link" defaultMessage="Room Link" />}
+            label={<FormattedMessage id="invite-popover.room-link" defaultMessage="Link da Sala" />}
             value={url}
             buttonPreset="accent3"
           />
           <CopyableTextInputField
-            label={<FormattedMessage id="invite-popover.room-code" defaultMessage="Room Code" />}
+            label={<FormattedMessage id="invite-popover.room-code" defaultMessage="Código da Sala" />}
             value={code}
             buttonPreset="accent4"
             description={
               <>
-                Enter code on{" "}
+                Insira o código em{" "}
                 <a href={shortUrl} target="_blank" rel="noopener noreferrer">
                   {shortUrl.replace("https://", "")}
                 </a>
@@ -37,7 +37,7 @@ function InvitePopoverContent({ url, shortUrl, code, embed, inviteRequired, fetc
             }
           />
           <CopyableTextInputField
-            label={<FormattedMessage id="invite-popover.embed-code" defaultMessage="Embed Code" />}
+            label={<FormattedMessage id="invite-popover.embed-code" defaultMessage="Código Embedado" />}
             value={embed}
             buttonPreset="accent5"
           />
@@ -60,7 +60,7 @@ InvitePopoverContent.propTypes = {
 
 const invitePopoverTitle = defineMessage({
   id: "invite-popover.title",
-  defaultMessage: "Invite"
+  defaultMessage: "Convite"
 });
 
 export function InvitePopoverButton({

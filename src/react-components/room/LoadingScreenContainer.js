@@ -23,18 +23,18 @@ export function LoadingScreenContainer({ onLoaded, scene }) {
   const infoMessages = useMemo(
     () => [
       {
-        heading: intl.formatMessage({ id: "loading-screen.heading.tip", defaultMessage: "Tip:" }),
+        heading: intl.formatMessage({ id: "loading-screen.heading.tip", defaultMessage: "Dica:" }),
         message: intl.formatMessage({
           id: "loading-screen.message.keyboard-controls",
-          defaultMessage: "Press the Q & E keys to turn left and right."
+          defaultMessage: "Pressione Q e E para virar para a esquerda e para a direita."
         })
       },
       {
-        heading: intl.formatMessage({ id: "loading-screen.heading.whats-new", defaultMessage: "What's New?" }),
+        heading: intl.formatMessage({ id: "loading-screen.heading.whats-new", defaultMessage: "O que há de novo?" }),
         message: intl.formatMessage(
           {
             id: "loading-screen.message.whats-new",
-            defaultMessage: "You can now set the default locale in your preferences. <a>Read More</a>"
+            defaultMessage: "Você agora pode definir seu local nas configurações. <a>Leia Mais</a>"
           },
           {
             // eslint-disable-next-line react/display-name

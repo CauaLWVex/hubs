@@ -55,23 +55,23 @@ const messages = defineMessages({
   default: {
     id: "loading-screen.default",
     description: "The scene has started loading.",
-    defaultMessage: "Loading scene..."
+    defaultMessage: "Carregando cena..."
   },
   loadingObjects: {
     id: "loading-screen.loading-objects",
     description: "The loading progress. How many objects have finished loading?",
-    defaultMessage: "Loading objects {loadedCount}/{objectCount}"
+    defaultMessage: "Carregando objetos {loadedCount}/{objectCount}"
   },
   connectingScene: {
     id: "loading-screen.connecting",
     description: "The scene is loaded, we are waiting for the networked scene to be connected to enter.",
-    defaultMessage: "Connecting to the scene..."
+    defaultMessage: "Conectando à cena..."
   },
   enteringRoom: {
     id: "loading-screen.entering-room",
     description:
       "Once the scene has finished loading, this message tells uses that they will be entering the room shortly.",
-    defaultMessage: "Entering room..."
+    defaultMessage: "Entrando na sala..."
   }
 });
 

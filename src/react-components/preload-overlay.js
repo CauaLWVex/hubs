@@ -17,7 +17,7 @@ export default class PreloadOverlay extends Component {
   };
 
   render() {
-    const loadButtonText = <FormattedMessage id="preload-overlay.load-button" defaultMessage="Load Room" />;
+    const loadButtonText = <FormattedMessage id="preload-overlay.load-button" defaultMessage="Carregar Sala" />;
 
     return (
       <div className={styles.treatment}>

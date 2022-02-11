@@ -18,7 +18,38 @@ const iconSheet = {
 export function EmojiPicker(props) {
   return (
     <Picker
-      title="Pick an emoji!"
+      title="Escolha um emoji!"
+      i18n={
+        {
+          search: 'Pesquisar',
+          clear: 'Limpar', // Accessible label on "clear" button
+          notfound: 'Nenhum Emoji Encontrado',
+          skintext: 'Escolha o tom de pele padrão',
+          categories: {
+            search: 'Resultados da Busca',
+            recent: 'Frequentes',
+            smileys: 'Sorrisos e Emoções',
+            people: 'Pessoas & Corpo',
+            nature: 'Animais & Natureza',
+            foods: 'Comidas & Bebidas',
+            activity: 'Atividades',
+            places: 'Viagem & Lugares',
+            objects: 'Objetos',
+            symbols: 'Símbolos',
+            flags: 'Bandeiras',
+            custom: 'Personalizados',
+          },
+          categorieslabel: 'Categorias', // Accessible title for the list of categories
+          skintones: {
+            1: 'Tom de Pele Padrão',
+            2: 'Tom Claro',
+            3: 'Tom Médio-Claro',
+            4: 'Tom Médio',
+            5: 'Tom Médio-Escuro',
+            6: 'Tom Escuro',
+          }
+        }
+      }
       color="var(--tab-highlight-color)"
       // eslint-disable-next-line no-unused-vars
       backgroundImageFn={(set, sheetSize) => iconSheet[sheetSize]}

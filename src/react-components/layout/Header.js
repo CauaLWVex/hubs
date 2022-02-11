@@ -46,28 +46,28 @@ export function Header({
             {showDocsLink && (
               <li>
                 <a href={docsUrl}>
-                  <FormattedMessage id="header.docs" defaultMessage="Guides" />
+                  <FormattedMessage id="header.docs" defaultMessage="Guias" />
                 </a>
               </li>
             )}
             {showSourceLink && (
               <li>
                 <a href="https://github.com/mozilla/hubs">
-                  <FormattedMessage id="header.source" defaultMessage="Developers" />
+                  <FormattedMessage id="header.source" defaultMessage="Desenvolvedores" />
                 </a>
               </li>
             )}
             {showCommunityLink && (
               <li>
                 <a href={communityUrl}>
-                  <FormattedMessage id="header.community" defaultMessage="Community" />
+                  <FormattedMessage id="header.community" defaultMessage="Comunidade" />
                 </a>
               </li>
             )}
             {showCloud && (
               <li>
                 <a href="/cloud">
-                  <FormattedMessage id="header.cloud" defaultMessage="Hubs Cloud" />
+                  <FormattedMessage id="header.cloud" defaultMessage="Metaverso TOT" />
                 </a>
               </li>
             )}
@@ -90,12 +90,12 @@ export function Header({
               <span>
                 <FormattedMessage
                   id="header.signed-in-as"
-                  defaultMessage="Signed in as {email}"
+                  defaultMessage="Logado como {email}"
                   values={{ email: maskEmail(email) }}
                 />
               </span>
               <a href="#" onClick={onSignOut}>
-                <FormattedMessage id="header.sign-out" defaultMessage="Sign Out" />
+                <FormattedMessage id="header.sign-out" defaultMessage="Sair" />
               </a>
             </div>
           ) : (

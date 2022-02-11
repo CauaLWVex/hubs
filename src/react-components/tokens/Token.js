@@ -10,13 +10,13 @@ const tokenTypes = {
   account: defineMessages({
     type: {
       id: "token-type.account-token",
-      defaultMessage: "Account Token"
+      defaultMessage: "Token de Conta"
     }
   }),
   app: defineMessages({
     type: {
       id: "token-type.app-token",
-      defaultMessage: "App Token"
+      defaultMessage: "Token de Aplicativo"
     }
   })
 };
@@ -49,13 +49,13 @@ export function Token({ tokenInfo, onRevokeToken }) {
           </div>
         </Row>
         <Button sm preset="cancel" onClick={onRevokeToken}>
-          <FormattedMessage id="tokens.revoke-token" defaultMessage="Revoke" />
+          <FormattedMessage id="tokens.revoke-token" defaultMessage="Revogar" />
         </Button>
       </Row>
       <Row padding="sm" className={styles.backgroundGrey}>
         <div className={styles.scopes}>
           <b>
-            <FormattedMessage id="tokens.scopes" defaultMessage="Scopes" />
+            <FormattedMessage id="tokens.scopes" defaultMessage="Escopos" />
           </b>
         </div>
         <Row topMargin="md" childrenMarginR="md">

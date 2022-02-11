@@ -17,7 +17,7 @@ export function MobileNav({ isHmc, showDocsLink, docsUrl, showSourceLink, showCo
       <div className={styles.navContainer}>
         <div className={styles.mobileNavWrapper}>
           <Hamburger onClick={toggleNav} />
-          <header className={`${navOpen ? `is-active ${cloud}` : "hide"}`}>
+          <header className={`${navOpen ? `is-active ${cloud}` : "esconder"}`}>
             <nav role="navigation">
               <ul>
                 {isHmc && (
@@ -30,28 +30,28 @@ export function MobileNav({ isHmc, showDocsLink, docsUrl, showSourceLink, showCo
                 {showDocsLink && (
                   <li>
                     <a href={docsUrl}>
-                      <FormattedMessage id="header.docs" defaultMessage="Guides" />
+                      <FormattedMessage id="header.docs" defaultMessage="Guias" />
                     </a>
                   </li>
                 )}
                 {showSourceLink && (
                   <li>
                     <a href="https://github.com/mozilla/hubs">
-                      <FormattedMessage id="header.source" defaultMessage="Developers" />
+                      <FormattedMessage id="header.source" defaultMessage="Desenvolvedores" />
                     </a>
                   </li>
                 )}
                 {showCommunityLink && (
                   <li>
                     <a href={communityUrl}>
-                      <FormattedMessage id="header.community" defaultMessage="Community" />
+                      <FormattedMessage id="header.community" defaultMessage="Comunidade" />
                     </a>
                   </li>
                 )}
                 {isHmc && (
                   <li>
                     <a href="/cloud">
-                      <FormattedMessage id="header.cloud" defaultMessage="Hubs Cloud" />
+                      <FormattedMessage id="header.cloud" defaultMessage="Metaverso TOT" />
                     </a>
                   </li>
                 )}

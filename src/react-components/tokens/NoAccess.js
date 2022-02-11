@@ -18,7 +18,7 @@ export const NoAccess = () => {
         <h2>
           <FormattedMessage
             id="tokens.administrator-privileges-required"
-            defaultMessage="Administrator privileges required"
+            defaultMessage="Privilégios de administrador necessários"
           />
         </h2>
       </Row>
@@ -26,13 +26,13 @@ export const NoAccess = () => {
         <p className={styleUtils.margin0}>
           <FormattedMessage
             id="tokens.no-access-description1"
-            defaultMessage="You do not have sufficient privileges to create API tokens."
+            defaultMessage="Você não tem privilégio suficiente para criar tokens de API."
           />
         </p>
         <p>
           <FormattedMessage
             id="tokens.no-access-description2"
-            defaultMessage="If you believe you should have access to this page, please request privileges from your Hubs administrator."
+            defaultMessage="Se você acredita que deveria ter acesso a esta página, por favor solicite os privilégios para o administrador."
           />
         </p>
       </div>

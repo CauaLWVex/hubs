@@ -15,33 +15,33 @@ export default {
 
 const FACETS = {
   sketchfab: [
-    { text: "Featured", params: { filter: "featured" } },
-    { text: "Animals", params: { filter: "animals-pets" } },
-    { text: "Architecture", params: { filter: "architecture" } },
-    { text: "Art", params: { filter: "art-abstract" } },
-    { text: "Vehicles", params: { filter: "cars-vehicles" } },
-    { text: "Characters", params: { filter: "characters-creatures" } },
-    { text: "Culture", params: { filter: "cultural-heritage-history" } },
-    { text: "Gadgets", params: { filter: "electronics-gadgets" } },
-    { text: "Fashion", params: { filter: "fashion-style" } },
-    { text: "Food", params: { filter: "food-drink" } },
-    { text: "Furniture", params: { filter: "furniture-home" } },
-    { text: "Music", params: { filter: "music" } },
-    { text: "Nature", params: { filter: "nature-plants" } },
-    { text: "News", params: { filter: "news-politics" } },
-    { text: "People", params: { filter: "people" } },
-    { text: "Places", params: { filter: "places-travel" } },
-    { text: "Science", params: { filter: "science-technology" } },
-    { text: "Sports", params: { filter: "sports-fitness" } },
-    { text: "Weapons", params: { filter: "weapons-military" } }
+    { text: "Destaques", params: { filter: "featured" } },
+    { text: "Animais", params: { filter: "animals-pets" } },
+    { text: "Arquitetura", params: { filter: "architecture" } },
+    { text: "Arte", params: { filter: "art-abstract" } },
+    { text: "Veículos", params: { filter: "cars-vehicles" } },
+    { text: "Personagens", params: { filter: "characters-creatures" } },
+    { text: "Cultura", params: { filter: "cultural-heritage-history" } },
+    { text: "Aparelhos", params: { filter: "electronics-gadgets" } },
+    { text: "Moda", params: { filter: "fashion-style" } },
+    { text: "Comida", params: { filter: "food-drink" } },
+    { text: "Móveis", params: { filter: "furniture-home" } },
+    { text: "Música", params: { filter: "music" } },
+    { text: "Natureza", params: { filter: "nature-plants" } },
+    { text: "Notícias", params: { filter: "news-politics" } },
+    { text: "Pessoas", params: { filter: "people" } },
+    { text: "Lugares", params: { filter: "places-travel" } },
+    { text: "Ciência", params: { filter: "science-technology" } },
+    { text: "Esportes", params: { filter: "sports-fitness" } },
+    { text: "Armas", params: { filter: "weapons-military" } }
   ],
   avatars: [
-    { text: "Featured", params: { filter: "featured" } },
-    { text: "My Avatars", params: { filter: "my-avatars" } },
-    { text: "Newest", params: { filter: "" } }
+    { text: "Destaques", params: { filter: "featured" } },
+    { text: "Meus Avatares", params: { filter: "my-avatars" } },
+    { text: "Mais Novos", params: { filter: "" } }
   ],
   favorites: [],
-  scenes: [{ text: "Featured", params: { filter: "featured" } }, { text: "My Scenes", params: { filter: "my-scenes" } }]
+  scenes: [{ text: "Destaques", params: { filter: "featured" } }, { text: "Minhas Cenas", params: { filter: "my-scenes" } }]
 };
 
 const room = {

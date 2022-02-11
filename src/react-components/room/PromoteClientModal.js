@@ -13,14 +13,14 @@ export function PromoteClientModal({ onClose, onConfirm, displayName }) {
         <p>
           <FormattedMessage
             id="promote-client-modal.message"
-            defaultMessage="Promoting a user will grant full access to room settings and moderation tools.{linebreak}Are you sure?"
+            defaultMessage="Promover um usuário irá conceder acesso total às configurações da sala e ferramentas de moderação.{linebreak}Você tem certeza?"
             values={{ linebreak: <br /> }}
           />
         </p>
         <Button preset="accept" onClick={onConfirm}>
           <FormattedMessage
             id="promote-client-modal.confirm-prefix"
-            defaultMessage="Yes, promote {name}"
+            defaultMessage="Sim, promover {name}"
             values={{ name: displayName }}
           />
         </Button>

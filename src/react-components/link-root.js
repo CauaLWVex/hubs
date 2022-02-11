@@ -18,7 +18,7 @@ function ToggleModeButton(props) {
   return (
     <span>
       <a href="#" {...props}>
-        <FormattedMessage id="link-page.toggle-mode-button" defaultMessage="Have a letter code?" />
+        <FormattedMessage id="link-page.toggle-mode-button" defaultMessage="Tem um código de letras?" />
       </a>
     </span>
   );
@@ -190,11 +190,11 @@ class LinkRoot extends Component {
                 {this.state.failedAtLeastOnce ? (
                   <FormattedMessage
                     id="link-page.try-again"
-                    defaultMessage="We couldn't find that code.{linebreak}Please try again."
+                    defaultMessage="Não encontramos este código.{linebreak}Por favor, tente novamente."
                     values={{ linebreak: <br /> }}
                   />
                 ) : (
-                  <FormattedMessage id="link-page.enter-code" defaultMessage="Enter code:" />
+                  <FormattedMessage id="link-page.enter-code" defaultMessage="Digite o código:" />
                 )}
               </div>
 
@@ -286,7 +286,7 @@ class LinkRoot extends Component {
             </div>
             <div className={styles.createLink}>
               <a href="/">
-                <FormattedMessage id="link-page.create-room-button" defaultMessage="Create a new room" />
+                <FormattedMessage id="link-page.create-room-button" defaultMessage="Criar uma nova sala" />
               </a>
             </div>
           </div>

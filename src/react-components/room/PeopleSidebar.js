@@ -20,7 +20,7 @@ function getDeviceLabel(ctx, intl) {
     if (ctx.hmd) {
       return intl.formatMessage({ id: "people-sidebar.device-label.vr", defaultMessage: "VR" });
     } else if (ctx.discord) {
-      return intl.formatMessage({ id: "people-sidebar.device-label.discord", defaultMessage: "Discord Bot" });
+      return intl.formatMessage({ id: "people-sidebar.device-label.discord", defaultMessage: "Bot do Discord" });
     } else if (ctx.mobile) {
       return intl.formatMessage({ id: "people-sidebar.device-label.mobile", defaultMessage: "Mobile" });
     }
@@ -46,13 +46,13 @@ function getDeviceIconComponent(ctx) {
 function getVoiceLabel(micPresence, intl) {
   if (micPresence) {
     if (micPresence.talking) {
-      return intl.formatMessage({ id: "people-sidebar.voice-label.talking", defaultMessage: "Talking" });
+      return intl.formatMessage({ id: "people-sidebar.voice-label.talking", defaultMessage: "Falando" });
     } else if (micPresence.muted) {
-      return intl.formatMessage({ id: "people-sidebar.voice-label.muted", defaultMessage: "Muted" });
+      return intl.formatMessage({ id: "people-sidebar.voice-label.muted", defaultMessage: "Silenciado" });
     }
   }
 
-  return intl.formatMessage({ id: "people-sidebar.voice-label.not-talking", defaultMessage: "Not Talking" });
+  return intl.formatMessage({ id: "people-sidebar.voice-label.not-talking", defaultMessage: "Sem Falar" });
 }
 
 function getVoiceIconComponent(micPresence) {
@@ -70,11 +70,11 @@ function getVoiceIconComponent(micPresence) {
 function getPresenceMessage(presence, intl) {
   switch (presence) {
     case "lobby":
-      return intl.formatMessage({ id: "people-sidebar.presence.in-lobby", defaultMessage: "In Lobby" });
+      return intl.formatMessage({ id: "people-sidebar.presence.in-lobby", defaultMessage: "No Lobby" });
     case "room":
-      return intl.formatMessage({ id: "people-sidebar.presence.in-room", defaultMessage: "In Room" });
+      return intl.formatMessage({ id: "people-sidebar.presence.in-room", defaultMessage: "Na Sala" });
     case "entering":
-      return intl.formatMessage({ id: "people-sidebar.presence.entering", defaultMessage: "Entering Room" });
+      return intl.formatMessage({ id: "people-sidebar.presence.entering", defaultMessage: "Entrando na Sala" });
     default:
       return undefined;
   }
@@ -83,7 +83,7 @@ function getPresenceMessage(presence, intl) {
 function getPersonName(person, intl) {
   const you = intl.formatMessage({
     id: "people-sidebar.person-name.you",
-    defaultMessage: "You"
+    defaultMessage: "Você"
   });
 
   return person.profile.displayName + (person.isMe ? ` (${you})` : "");
@@ -97,7 +97,7 @@ export function PeopleSidebar({ people, onSelectPerson, onClose, showMuteAll, on
       title={
         <FormattedMessage
           id="people-sidebar.title"
-          defaultMessage="People ({numPeople})"
+          defaultMessage="Pessoas ({numPeople})"
           values={{ numPeople: people.length }}
         />
       }
@@ -105,7 +105,7 @@ export function PeopleSidebar({ people, onSelectPerson, onClose, showMuteAll, on
       afterTitle={
         showMuteAll ? (
           <IconButton onClick={onMuteAll}>
-            <FormattedMessage id="people-sidebar.mute-all-button" defaultMessage="Mute All" />
+            <FormattedMessage id="people-sidebar.mute-all-button" defaultMessage="Mutar Todos" />
           </IconButton>
         ) : (
           undefined
@@ -129,7 +129,7 @@ export function PeopleSidebar({ people, onSelectPerson, onClose, showMuteAll, on
               <p>{getPersonName(person, intl)}</p>
               {person.roles.owner && (
                 <StarIcon
-                  title={intl.formatMessage({ id: "people-sidebar.moderator-label", defaultMessage: "Moderator" })}
+                  title={intl.formatMessage({ id: "people-sidebar.moderator-label", defaultMessage: "Moderador" })}
                   className={styles.moderatorIcon}
                   width={12}
                   height={12}

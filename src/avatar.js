@@ -83,7 +83,7 @@ class AvatarPage extends React.Component {
       return (
         <div className={styles.avatarLanding}>
           <div className={classNames([styles.box, styles.darkened])}>
-            <FormattedMessage id="avatar-page.loading" defaultMessage="Loading" />
+            <FormattedMessage id="avatar-page.loading" defaultMessage="Carregando" />
           </div>
         </div>
       );
@@ -106,9 +106,9 @@ class AvatarPage extends React.Component {
             {copyState ? (
               <div className={styles.copyTip}>
                 {copyState === "copying" ? (
-                  <FormattedMessage id="avatar-page.copying-avatar" defaultMessage="Copying..." />
+                  <FormattedMessage id="avatar-page.copying-avatar" defaultMessage="Copiando..." />
                 ) : (
-                  <FormattedMessage id="avatar-page.copyied-avatar" defaultMessage="Copied" />
+                  <FormattedMessage id="avatar-page.copyied-avatar" defaultMessage="Copiado" />
                 )}
               </div>
             ) : (
@@ -118,7 +118,7 @@ class AvatarPage extends React.Component {
                 <a
                   className={styles.editAvatar}
                   onClick={this.handleCopyAvatar}
-                  title={<FormattedMessage id="avatar-page.copy-button" defaultMessage="Copy to my avatars" />}
+                  title={<FormattedMessage id="avatar-page.copy-button" defaultMessage="Copiar aos meus avatares" />}
                 >
                   <FontAwesomeIcon icon={faClone} />
                 </a>
@@ -127,11 +127,11 @@ class AvatarPage extends React.Component {
           </div>
           {isSelected ? (
             <span className={styles.selectedMessage}>
-              <FormattedMessage id="avatar-page.selected" defaultMessage="This is your current avatar" />
+              <FormattedMessage id="avatar-page.selected" defaultMessage="Este é o seu avatar atual" />
             </span>
           ) : (
             <button disabled={isSelected} className={styles.formSubmit} type="submit">
-              <FormattedMessage id="avatar-page.select" defaultMessage="Select" />
+              <FormattedMessage id="avatar-page.select" defaultMessage="Selecionar" />
             </button>
           )}
         </div>

@@ -11,7 +11,7 @@ import { FormattedMessage } from "react-intl";
 export function MicPermissionsModal({ className, error, onClickErrorButton, errorButtonLabel, onBack, ...rest }) {
   return (
     <Modal
-      title={<FormattedMessage id="mic-permissions-modal.title" defaultMessage="Enter on Device" />}
+      title={<FormattedMessage id="mic-permissions-modal.title" defaultMessage="Entrar em VR" />}
       beforeTitle={<BackButton onClick={onBack} />}
       className={className}
       {...rest}
@@ -20,13 +20,13 @@ export function MicPermissionsModal({ className, error, onClickErrorButton, erro
         <b>
           <FormattedMessage
             id="mic-permissions-modal.grant-mic-permissions"
-            defaultMessage="Grant Microphone Permissions"
+            defaultMessage="Garantir Permissões de Microfone"
           />
         </b>
         <small>
           <FormattedMessage
             id="mic-permissions-modal.mic-access-needed"
-            defaultMessage="Microphone access needed to be heard by others.{linebreak}Microphone can be muted in room."
+            defaultMessage="O acesso ao microfone é necessário para ser ouvido pelos outros.{linebreak}O microfone pode ser silenciado na sala."
             values={{ linebreak: <br /> }}
           />
         </small>

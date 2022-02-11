@@ -63,12 +63,12 @@ export function HomePage() {
               <span>
                 <FormattedMessage
                   id="header.signed-in-as"
-                  defaultMessage="Signed in as {email}"
+                  defaultMessage="Logado como {email}"
                   values={{ email: maskEmail(email) }}
                 />
               </span>
               <a href="#" onClick={auth.signOut} className={styles.mobileSignOut}>
-                <FormattedMessage id="header.sign-out" defaultMessage="Sign Out" />
+                <FormattedMessage id="header.sign-out" defaultMessage="Sair" />
               </a>
             </div>
           ) : (
@@ -91,7 +91,7 @@ export function HomePage() {
               alt={intl.formatMessage(
                 {
                   id: "home-page.hero-image-alt",
-                  defaultMessage: "Screenshot of {appName}"
+                  defaultMessage: "Captura de {appName}"
                 },
                 { appName: configs.translation("app-name") }
               )}
@@ -105,12 +105,12 @@ export function HomePage() {
           <Column padding gap="xl" className={styles.card}>
             <img src={configs.image("landing_rooms_thumb")} />
             <h3>
-              <FormattedMessage id="home-page.rooms-title" defaultMessage="Instantly create rooms" />
+              <FormattedMessage id="home-page.rooms-title" defaultMessage="Crie salas instantaneamente" />
             </h3>
             <p>
               <FormattedMessage
                 id="home-page.rooms-blurb"
-                defaultMessage="Share virtual spaces with your friends, co-workers, and communities. When you create a room with Hubs, you’ll have a private virtual meeting space that you can instantly share <b>- no downloads or VR headset necessary.</b>"
+                defaultMessage="Compartilhe espaços virtuais com seus amigos, colegas de trabalho, e comunidades. Quando você cria uma sala, você tem um espaço de reunião privado que você pode compartilhar instantaneamente <b>- sem downloads ou óculos de VR necessários.</b>"
                 values={{ b: wrapInBold }}
               />
             </p>
@@ -118,24 +118,24 @@ export function HomePage() {
           <Column padding gap="xl" className={styles.card}>
             <img src={configs.image("landing_communicate_thumb")} />
             <h3>
-              <FormattedMessage id="home-page.communicate-title" defaultMessage="Communicate and Collaborate" />
+              <FormattedMessage id="home-page.communicate-title" defaultMessage="Comunique-se e colabore" />
             </h3>
             <p>
               <FormattedMessage
                 id="home-page.communicate-blurb"
-                defaultMessage="Choose an avatar to represent you, put on your headphones, and jump right in. Hubs makes it easy to stay connected with voice and text chat to other people in your private room."
+                defaultMessage="Escolha um avatar para te representar, bote seu fone de ouvido, e caia dentro. É fácil se manter conectado com voz e chat em texto com outras pessoas no seu espaço privado."
               />
             </p>
           </Column>
           <Column padding gap="xl" className={styles.card}>
             <img src={configs.image("landing_media_thumb")} />
             <h3>
-              <FormattedMessage id="home-page.media-title" defaultMessage="An easier way to share media" />
+              <FormattedMessage id="home-page.media-title" defaultMessage="Um jeito fácil de compartilhar mídia." />
             </h3>
             <p>
               <FormattedMessage
                 id="home-page.media-blurb"
-                defaultMessage="Share content with others in your room by dragging and dropping photos, videos, PDF files, links, and 3D models into your space."
+                defaultMessage="Compartilhe conteúdo com os outros selecionando e arrastando fotos, vídeos, arquivos PDF, links, e modelos 3D no seu espaço."
               />
             </p>
           </Column>
@@ -144,7 +144,7 @@ export function HomePage() {
       {sortedPublicRooms.length > 0 && (
         <Container className={styles.roomsContainer}>
           <h3 className={styles.roomsHeading}>
-            <FormattedMessage id="home-page.public--rooms" defaultMessage="Public Rooms" />
+            <FormattedMessage id="home-page.public--rooms" defaultMessage="Salas Públicas" />
           </h3>
           <Column grow padding className={styles.rooms}>
             <MediaGrid center>
@@ -166,7 +166,7 @@ export function HomePage() {
       {sortedFavoriteRooms.length > 0 && (
         <Container className={styles.roomsContainer}>
           <h3 className={styles.roomsHeading}>
-            <FormattedMessage id="home-page.favorite-rooms" defaultMessage="Favorite Rooms" />
+            <FormattedMessage id="home-page.favorite-rooms" defaultMessage="Salas Favoritas" />
           </h3>
           <Column grow padding className={styles.rooms}>
             <MediaGrid center>
@@ -188,7 +188,7 @@ export function HomePage() {
       <Container>
         <Column center grow>
           <Button thin preset="landing" as="a" href="/link">
-            <FormattedMessage id="home-page.have-code" defaultMessage="Have a room code?" />
+            <FormattedMessage id="home-page.have-code" defaultMessage="Tem um código de sala?" />
           </Button>
         </Column>
       </Container>

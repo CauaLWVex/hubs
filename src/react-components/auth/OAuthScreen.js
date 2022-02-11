@@ -14,19 +14,19 @@ const providerLabel = {
 export function OAuthScreen({ provider, redirectUrl, termsUrl, privacyUrl, ...rest }) {
   return (
     <div className={styles.oauthScreen} {...rest}>
-      <Modal title={<FormattedMessage id="oauth-screen.title" defaultMessage="Sign In To Continue" />}>
+      <Modal title={<FormattedMessage id="oauth-screen.title" defaultMessage="Entre para continuar" />}>
         <Column center padding>
           <p>
             <FormattedMessage
               id="oauth-screen.description"
-              defaultMessage="You'll need to sign in to {provider} to access this room."
+              defaultMessage="Você precisa entrar no {provider} para acessar esta sala."
               values={{ provider: providerLabel[provider] }}
             />
           </p>
           <p>
             <FormattedMessage
               id="oauth-screen.email-reason"
-              defaultMessage="We'll ask for access to your e-mail address so you can skip signing in next time."
+              defaultMessage="Nós vamos solicitar acesso ao seu e-mail, assim você pode pular o login na próxima vez."
             />
           </p>
           <p>
@@ -37,7 +37,7 @@ export function OAuthScreen({ provider, redirectUrl, termsUrl, privacyUrl, ...re
           <Button as="a" href={redirectUrl} preset={provider === "discord" ? "accent5" : "accent4"}>
             <FormattedMessage
               id="oauth-screen.sign-in-button"
-              defaultMessage="Sign Into {provider}"
+              defaultMessage="Entre no {provider}"
               values={{ provider: providerLabel[provider] }}
             />
           </Button>

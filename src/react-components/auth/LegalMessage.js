@@ -25,7 +25,7 @@ export function LegalMessage({ termsUrl, privacyUrl }) {
     return (
       <FormattedMessage
         id="legal-message.tos-and-privacy"
-        defaultMessage="By proceeding, you agree to the <toslink>terms of use</toslink> and <privacylink>privacy notice</privacylink>."
+        defaultMessage="Ao prosseguir, você concorda com os <toslink>termos de uso</toslink> e com a <privacylink>nota de privacidade</privacylink>."
         values={{
           toslink,
           privacylink
@@ -38,7 +38,7 @@ export function LegalMessage({ termsUrl, privacyUrl }) {
     return (
       <FormattedMessage
         id="legal-message.tos"
-        defaultMessage="By proceeding, you agree to the <toslink>terms of use</toslink>."
+        defaultMessage="Ao prosseguir, você concorda com os <toslink>termos de uso</toslink>."
         values={{
           toslink
         }}
@@ -50,7 +50,7 @@ export function LegalMessage({ termsUrl, privacyUrl }) {
     return (
       <FormattedMessage
         id="legal-message.privacy"
-        defaultMessage="By proceeding, you agree to the <privacylink>privacy notice</privacylink>."
+        defaultMessage="Ao prosseguir, você concorda com a <privacylink>nota de privacidade</privacylink>."
         values={{
           privacylink
         }}

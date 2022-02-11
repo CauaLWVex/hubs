@@ -8,12 +8,12 @@ import { defineMessage, useIntl } from "react-intl";
 
 const copyLabelMessage = defineMessage({
   id: "copyable-text-input-field.copy-label",
-  defaultMessage: "Copy"
+  defaultMessage: "Copiar"
 });
 
 const copiedLabelMessage = defineMessage({
   id: "copyable-text-input-field.copied-label",
-  defaultMessage: "Copied"
+  defaultMessage: "Copiado"
 });
 
 export function CopyableTextInputField({ buttonPreset, ...rest }) {

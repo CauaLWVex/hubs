@@ -12,7 +12,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 function SceneAttribution({ attribution }) {
   const intl = useIntl();
 
-  const unknown = intl.formatMessage({ id: "room-sidebar.unknown", defaultMessage: "unknown" });
+  const unknown = intl.formatMessage({ id: "room-sidebar.unknown", defaultMessage: "desconhecido" });
 
   const name = attribution.name || attribution.title || unknown;
   const author = attribution.author || unknown;
@@ -31,7 +31,7 @@ function SceneAttribution({ attribution }) {
           {source ? (
             <FormattedMessage
               id="room-sidebar.scene-attribution-with-source"
-              defaultMessage="by {author} on {source}"
+              defaultMessage="por {author} na {source}"
               values={{
                 author,
                 source
@@ -40,7 +40,7 @@ function SceneAttribution({ attribution }) {
           ) : (
             <FormattedMessage
               id="room-sidebar.scene-attribution"
-              defaultMessage="by {author}"
+              defaultMessage="por {author}"
               values={{
                 author
               }}
@@ -56,7 +56,7 @@ function SceneAttribution({ attribution }) {
         <div className={styles.attributionAuthor}>
           <FormattedMessage
             id="room-sidebar.scene-attribution"
-            defaultMessage="by {author}"
+            defaultMessage="por {author}"
             values={{
               author
             }}
@@ -78,7 +78,7 @@ function allowDisplayOfSceneLink(accountId, scene) {
 export function SceneInfo({ accountId, scene, showAttributions, canChangeScene, onChangeScene }) {
   const changeSceneButton = canChangeScene && (
     <Button preset="primary" onClick={onChangeScene}>
-      <FormattedMessage id="room-sidebar.scene-info.change-scene-button" defaultMessage="Change Scene" />
+      <FormattedMessage id="room-sidebar.scene-info.change-scene-button" defaultMessage="Mudar Cena" />
     </Button>
   );
   if (!scene) return changeSceneButton;
@@ -93,7 +93,7 @@ export function SceneInfo({ accountId, scene, showAttributions, canChangeScene, 
   return (
     <>
       <h2 className={styles.sectionTitle}>
-        <FormattedMessage id="room-sidebar.scene-info.title" defaultMessage="Scene" />
+        <FormattedMessage id="room-sidebar.scene-info.title" defaultMessage="Cena" />
       </h2>
       <div className={styles.sceneScreenshotContainer}>
         {showSceneLink ? (
@@ -117,7 +117,7 @@ export function SceneInfo({ accountId, scene, showAttributions, canChangeScene, 
         <div className={styles.sceneCreator}>
           <FormattedMessage
             id="room-sidebar.scene-info.scene-creator"
-            defaultMessage="by {creator}"
+            defaultMessage="por {creator}"
             values={{ creator }}
           />
         </div>
@@ -125,7 +125,7 @@ export function SceneInfo({ accountId, scene, showAttributions, canChangeScene, 
       {showAttributions &&
         filteredAttributionElements.length > 0 && (
           <InputField
-            label={<FormattedMessage id="room-sidebar.scene-info.attributions" defaultMessage="Attributions" />}
+            label={<FormattedMessage id="room-sidebar.scene-info.attributions" defaultMessage="Atribuições" />}
           >
             <ul className={styles.attributions}>{filteredAttributionElements}</ul>
           </InputField>
@@ -138,22 +138,22 @@ export function SceneInfo({ accountId, scene, showAttributions, canChangeScene, 
 export function RoomSidebar({ room, accountId, onClose, canEdit, onEdit, onChangeScene }) {
   return (
     <Sidebar
-      title={<FormattedMessage id="room-sidebar.title" defaultMessage="Room" />}
+      title={<FormattedMessage id="room-sidebar.title" defaultMessage="Sala" />}
       beforeTitle={<CloseButton onClick={onClose} />}
       afterTitle={
         canEdit && (
           <IconButton onClick={onEdit}>
-            <FormattedMessage id="room-sidebar.edit-button" defaultMessage="Edit" />
+            <FormattedMessage id="room-sidebar.edit-button" defaultMessage="Editar" />
           </IconButton>
         )
       }
     >
       <Column padding>
-        <InputField label={<FormattedMessage id="room-sidebar.room-name" defaultMessage="Name" />}>
+        <InputField label={<FormattedMessage id="room-sidebar.room-name" defaultMessage="Nome" />}>
           {room.name}
         </InputField>
         {room.description && (
-          <InputField label={<FormattedMessage id="room-sidebar.room-description" defaultMessage="Description" />}>
+          <InputField label={<FormattedMessage id="room-sidebar.room-description" defaultMessage="Descrição" />}>
             {room.description}
           </InputField>
         )}

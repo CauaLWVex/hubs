@@ -16,10 +16,10 @@ export const TokenList = ({ tokens, onRevokeToken, onShowCreateToken, error, isF
       <TokenMenuHeader />
       <Row spaceBetween breakpointColumn="sm" topMargin="lg">
         <h2>
-          <FormattedMessage id="empty-token.title2" defaultMessage="Token List" />
+          <FormattedMessage id="empty-token.title2" defaultMessage="Lista de Tokens" />
         </h2>
         <Button preset="primary" sm onClick={onShowCreateToken}>
-          <FormattedMessage id="tokens.button-create-token" defaultMessage="Create token" />
+          <FormattedMessage id="tokens.button-create-token" defaultMessage="Criar token" />
         </Button>
       </Row>
       <SpinWhileTrue isSpinning={isFetching}>
@@ -38,7 +38,7 @@ export const TokenList = ({ tokens, onRevokeToken, onShowCreateToken, error, isF
           <div className={styleUtils.xlMarginY}>
             <Row padding="md" className={styles.backgroundWhite}>
               <Center>
-                <FormattedMessage id="tokens.no-tokens-created" defaultMessage="No tokens created." />
+                <FormattedMessage id="tokens.no-tokens-created" defaultMessage="Nenhum token criado." />
               </Center>
             </Row>
           </div>
@@ -59,12 +59,12 @@ TokenList.propTypes = {
 const TokenMenuHeader = () => (
   <Column gap="xl">
     <h1>
-      <FormattedMessage id="empty-token.title" defaultMessage="API Tokens" />
+      <FormattedMessage id="empty-token.title" defaultMessage="Tokens de API" />
     </h1>
     <p>
-      <FormattedMessage id="tokens.create-tokens-description" defaultMessage="Create tokens to access the" />{" "}
+      <FormattedMessage id="tokens.create-tokens-description" defaultMessage="Crie tokens para acessar a" />{" "}
       <a href="https://github.com/mozilla/reticulum/blob/master/guides/api.md" rel="noreferrer noopener">
-        <FormattedMessage id="tokens.create-tokens-description-hubs-api" defaultMessage="Hubs API" />
+        <FormattedMessage id="tokens.create-tokens-description-hubs-api" defaultMessage="API do Metaverso" />
       </a>.
     </p>
   </Column>

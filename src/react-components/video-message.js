@@ -16,7 +16,7 @@ export default function VideoMessage({ name, body: { src: url }, className, mayS
     title: intl.formatMessage(
       {
         id: "video-message.default-tweet",
-        defaultMessage: "Taken in {shareHashtag}"
+        defaultMessage: "Gravado em {shareHashtag}"
       },
       {
         shareHashtag: configs.translation("share-hashtag"),
@@ -30,7 +30,7 @@ export default function VideoMessage({ name, body: { src: url }, className, mayS
       <div className={styles.mediaBody}>
         <FormattedMessage
           id="video-message.body"
-          defaultMessage="{name} took a <a>video</a>."
+          defaultMessage="{name} gravou um <a>video</a>."
           values={{
             name: <b>{name}</b>,
             // eslint-disable-next-line react/display-name

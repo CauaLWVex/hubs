@@ -5,7 +5,7 @@ import { applyThemeToTextButton } from "../utils/theme";
 AFRAME.registerComponent("pin-networked-object-button", {
   schema: {
     // Selector for label informing users about Discord bridging of pins.
-    tipSelector: { type: "string" },
+    tipSelector: { type: "string" },    
 
     // Selector for label to change when pinned/unpinned, must be sibling of this components element
     labelSelector: { type: "string" }
@@ -94,7 +94,7 @@ AFRAME.registerComponent("pin-networked-object-button", {
     this.tipEl.object3D.visible = !!(canPin && !isPinned && this.hovering && discordBridges.length > 0);
 
     if (!canPin) return;
-    this.labelEl.setAttribute("text", "value", isPinned ? "un-pin" : "pin");
+    this.labelEl.setAttribute("text", "value", isPinned ? "desfixar" : "fixar");
     applyThemeToTextButton(this.el, isPinned);
   }
 });

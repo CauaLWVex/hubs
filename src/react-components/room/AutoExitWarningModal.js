@@ -13,11 +13,11 @@ export const AutoExitReason = {
 const messages = defineMessages({
   [AutoExitReason.concurrentSession]: {
     id: "auto-exit-warning-modal.reason.concurrent-session",
-    defaultMessage: "You have started another session."
+    defaultMessage: "Você iniciou outra sessão."
   },
   [AutoExitReason.idle]: {
     id: "auto-exit-warning-modal.reason.idle",
-    defaultMessage: "You have been idle for too long."
+    defaultMessage: "Você esteve fora por muito tempo."
   }
 });
 
@@ -30,7 +30,7 @@ export function AutoExitWarningModal({ onCancel, reason, secondsRemaining }) {
         <b>
           <FormattedMessage
             id="auto-exit-warning-modal.message"
-            defaultMessage="Auto-ending session in {secondsRemaining} seconds"
+            defaultMessage="Encerrando sessão automaticamente em {secondsRemaining} segundos"
             values={{ secondsRemaining }}
           />
         </b>

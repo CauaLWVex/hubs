@@ -73,7 +73,7 @@ export function SelectInputField({
             {selectedItemLabel !== undefined ? (
               selectedItemLabel
             ) : (
-              <FormattedMessage id="select-input-field.placeholder" defaultMessage="Select..." />
+              <FormattedMessage id="select-input-field.placeholder" defaultMessage="Selecione..." />
             )}
           </span>
           <CaretDownIcon />

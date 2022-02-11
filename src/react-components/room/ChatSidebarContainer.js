@@ -221,13 +221,13 @@ export function ChatSidebarContainer({ scene, canSpawnMessages, presences, occup
     if (discordBridges.length === 0) {
       placeholder = intl.formatMessage({
         id: "chat-sidebar-container.input-placeholder.empty-room",
-        defaultMessage: "Nobody is here yet..."
+        defaultMessage: "Ninguém está aqui ainda..."
       });
     } else {
       placeholder = intl.formatMessage(
         {
           id: "chat-sidebar-container.input-placeholder.empty-room-bot",
-          defaultMessage: "Send message to {discordChannels}"
+          defaultMessage: "Enviar mensagem para {discordChannels}"
         },
         { discordChannels: discordSnippet }
       );
@@ -238,7 +238,7 @@ export function ChatSidebarContainer({ scene, canSpawnMessages, presences, occup
         {
           id: "chat-sidebar-container.input-placeholder.occupants",
           defaultMessage:
-            "{occupantCount, plural, one {Send message to one other...} other {Send message to {occupantCount} others...} }"
+            "{occupantCount, plural, one {Envie mensagens para os outros...} other {Send message to {occupantCount} others...} }"
         },
         { discordChannels: discordSnippet, occupantCount: occupantCount - 1 }
       );

@@ -15,7 +15,7 @@ export function VerifyingEmail() {
   return (
     <Column center padding grow>
       <b>
-        <FormattedMessage id="verify-modal.verifying-email" defaultMessage="Verifying Email" />
+        <FormattedMessage id="verify-modal.verifying-email" defaultMessage="Verificando Email" />
       </b>
       <br />
       <Spinner />
@@ -27,12 +27,12 @@ export function EmailVerified({ origin }) {
   return (
     <Column center padding grow>
       <b>
-        <FormattedMessage id="verify-modal.verification-complete" defaultMessage="Verification Complete" />
+        <FormattedMessage id="verify-modal.verification-complete" defaultMessage="Verificação Completa" />
       </b>
       <p>
         <FormattedMessage
           id="verify-modal.close-window"
-          defaultMessage="Please close this browser window and return to {origin}."
+          defaultMessage="Por favor, feche esta aba e retorne a {origin}."
           values={{ origin }}
         />
       </p>
@@ -48,11 +48,11 @@ export function VerificationError({ error }) {
   return (
     <Column center padding grow>
       <b>
-        <FormattedMessage id="verify-modal.error" defaultMessage="Error Verifying Email" />
+        <FormattedMessage id="verify-modal.error" defaultMessage="Erro ao Verificar Email" />
       </b>
       <p>
         {(error && error.message) || (
-          <FormattedMessage id="verify-modal.unknown-error" defaultMessage="Unknown Error" />
+          <FormattedMessage id="verify-modal.unknown-error" defaultMessage="Erro desconhecido" />
         )}
       </p>
     </Column>
@@ -65,7 +65,7 @@ VerificationError.propTypes = {
 
 export function VerifyModal({ children }) {
   return (
-    <Modal title={<FormattedMessage id="verify-modal.title" defaultMessage="Verify" />} disableFullscreen>
+    <Modal title={<FormattedMessage id="verify-modal.title" defaultMessage="Verificar" />} disableFullscreen>
       {children}
     </Modal>
   );

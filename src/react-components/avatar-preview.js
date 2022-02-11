@@ -378,7 +378,7 @@ class AvatarPreview extends Component {
               />
               <FormattedMessage
                 id="avatar-preview.loading-failed"
-                defaultMessage="Loading failed{linebreak}Please choose another avatar"
+                defaultMessage="Falha ao carregar{linebreak}Por favor escolha outro avatar"
                 values={{ linebreak: <br /> }}
               />
             </div>

@@ -84,7 +84,7 @@ export function Footer({
             {showPrivacy && (
               <li>
                 <a className={styles.link} target="_blank" rel="noopener noreferrer" href={privacyUrl}>
-                  <FormattedMessage id="footer.privacy-notice" defaultMessage="Privacy Notice" />
+                  <FormattedMessage id="footer.privacy-notice" defaultMessage="Nota de privacidade" />
                 </a>
               </li>
             )}

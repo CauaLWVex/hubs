@@ -12,7 +12,7 @@ export function SceneUrlModal({ enableSpoke, editorName, onValidateUrl, onSubmit
   const { isSubmitting, handleSubmit, register, errors } = useForm();
   return (
     <Modal
-      title={<FormattedMessage id="scene-url-modal.title" defaultMessage="Custom Scene URL" />}
+      title={<FormattedMessage id="scene-url-modal.title" defaultMessage="URL de Cena Personalizada" />}
       beforeTitle={<CloseButton onClick={onClose} />}
     >
       <Column as="form" padding center onSubmit={handleSubmit(onSubmit)}>
@@ -20,7 +20,7 @@ export function SceneUrlModal({ enableSpoke, editorName, onValidateUrl, onSubmit
           {enableSpoke ? (
             <FormattedMessage
               id="scene-url-modal.message-with-spoke"
-              defaultMessage="Paste a URL to a {editorName} scene or a URL to a <glblink>GLB</glblink>."
+              defaultMessage="Copie a URL para uma cena {editorName} ou uma URL para um <glblink>GLB</glblink>."
               values={{
                 editorName: (
                   <a href="/spoke" target="_blank" rel="noopener noreferrer">
@@ -38,7 +38,7 @@ export function SceneUrlModal({ enableSpoke, editorName, onValidateUrl, onSubmit
           ) : (
             <FormattedMessage
               id="scene-url-modal.message"
-              defaultMessage="Paste a URL to a scene or a URL to a <glblink>GLB</glblink>."
+              defaultMessage="Copie a URL para a cena ou a URL para um <glblink>GLB</glblink>."
               values={{
                 // eslint-disable-next-line react/display-name
                 glblink: chunks => (
@@ -52,29 +52,29 @@ export function SceneUrlModal({ enableSpoke, editorName, onValidateUrl, onSubmit
         </p>
         <TextInputField
           name="url"
-          label={<FormattedMessage id="scene-url-modal.url-input" defaultMessage="Scene URL" />}
-          placeholder="https://example.com/scene.glb"
+          label={<FormattedMessage id="scene-url-modal.url-input" defaultMessage="URL da Cena" />}
+          placeholder="https://exemplo.com/cena.glb"
           type="url"
           required
           ref={register({ validate: onValidateUrl })}
           error={errors.url && errors.url.message}
         />
         <Button type="submit" preset="accept" disabled={isSubmitting}>
-          <FormattedMessage id="scene-url-modal.change-scene-button" defaultMessage="Change Scene" />
+          <FormattedMessage id="scene-url-modal.change-scene-button" defaultMessage="Mudar Cena" />
         </Button>
         {enableSpoke && (
           <>
             <p>
               <FormattedMessage
                 id="scene-url-modal.create-in-spoke"
-                defaultMessage="Or, create a new scene using {editorName}."
+                defaultMessage="Ou crie uma nova cena usando {editorName}."
                 values={{ editorName }}
               />
             </p>
             <Button as="a" preset="primary" href="/spoke/new" target="_blank" rel="noopener noreferrer">
               <FormattedMessage
                 id="scene-url-modal.new-spoke-project-button"
-                defaultMessage="Launch {editorName}"
+                defaultMessage="Inicie {editorName}"
                 values={{ editorName }}
               />
             </Button>

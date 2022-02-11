@@ -31,31 +31,31 @@ if (window.navigator.keyboard !== undefined && window.navigator.keyboard.getLayo
 const onboardingMessages = defineMessages({
   "tips.mobile.look": {
     id: "tips.mobile.look",
-    defaultMessage: "Welcome! 👋 Tap and drag to look around."
+    defaultMessage: "Bem Vindo! 👋 Clique e arraste para olhar ao redor."
   },
   "tips.mobile.locomotion": {
     id: "tips.mobile.locomotion",
-    defaultMessage: "Great! To move, pinch with two fingers."
+    defaultMessage: "Ótimo! Para se mover, faça uma pinça com 2 dedos."
   },
   "tips.mobile.invite": {
     id: "tips.mobile.invite",
-    defaultMessage: "Use the Invite button in the bottom left to share this room."
+    defaultMessage: "Use o Botão de Convite no canto esquerdo da tela para compartilhar a sala."
   },
   "tips.desktop.look": {
     id: "tips.desktop.look",
-    defaultMessage: "Welcome to {appName}! Let's take a quick tour. 👋 Click and drag to look around."
+    defaultMessage: "Bem Vindo ao {appName}! Vamos fazer um tour rápido. 👋 Clique e arraste para olhar ao redor."
   },
   "tips.desktop.locomotion": {
     id: "tips.desktop.locomotion",
-    defaultMessage: "Use the {moveKeys} keys to move. Hold shift to boost."
+    defaultMessage: "Use as teclas {moveKeys} para se mover. Segure shift para correr."
   },
   "tips.desktop.turning": {
     id: "tips.desktop.turning",
-    defaultMessage: "Perfect. Use the {turnLeftKey} and {turnRightKey} keys to rotate."
+    defaultMessage: "Perfeito. Use a tecla {turnLeftKey} e a {turnRightKey} para rotacionar."
   },
   "tips.desktop.invite": {
     id: "tips.desktop.invite",
-    defaultMessage: "Nobody else is here. Use the invite button in the bottom left to share this room."
+    defaultMessage: "Ninguém mais esta aqui. Use o Botão de Convite na esquerda da tela para compartilhar a sala."
   }
 });
 
@@ -64,13 +64,13 @@ function OkDismissLabel() {
 }
 
 function SkipDismissLabel() {
-  return <FormattedMessage id="tips.dismiss.skip" defaultMessage="Skip" />;
+  return <FormattedMessage id="tips.dismiss.skip" defaultMessage="Pular" />;
 }
 
 export function FullscreenTip(props) {
   return (
     <Tip {...props} dismissLabel={<OkDismissLabel />}>
-      <FormattedMessage id="tips.fullscreen" defaultMessage="Entered fullscreen mode. Press Escape to show UI." />
+      <FormattedMessage id="tips.fullscreen" defaultMessage="Entrou em modo tela cheia. Pressione Esc para mostrar a interface." />
     </Tip>
   );
 }
@@ -121,7 +121,7 @@ export function TipContainer({ hide, inLobby, inRoom, isStreaming, isEmbedded, s
 
     return (
       <Tip onDismiss={() => setLobbyTipDismissed(true)} dismissLabel={<OkDismissLabel />}>
-        <FormattedMessage id="tips.lobby" defaultMessage="You're in the lobby. Others cannot see or hear you." />
+        <FormattedMessage id="tips.lobby" defaultMessage="Você está no Lobby. Os outros não podem te ver ou ouvir." />
       </Tip>
     );
   } else if (inRoom) {
@@ -143,7 +143,7 @@ export function TipContainer({ hide, inLobby, inRoom, isStreaming, isEmbedded, s
         <Tip onDismiss={() => setStreamingTipDismissed(true)} dismissLabel={<OkDismissLabel />}>
           <FormattedMessage
             id="tips.streaming"
-            defaultMessage="Now broadcasting to the lobby. Exit streamer mode in the more menu when you're done."
+            defaultMessage="Agora transmitindo para o Lobby. Saia do Modo Streamer quando estiver pronto."
           />
         </Tip>
       );

@@ -15,7 +15,7 @@ import { SpinWhileTrue } from "../layout/SpinWhileTrue";
 export function RevokeTokenModal({ onClose, onRevoke, error, isPending }) {
   return (
     <Modal
-      title={<FormattedMessage id="revoke-token-modal.title" defaultMessage="Revoke token" />}
+      title={<FormattedMessage id="revoke-token-modal.title" defaultMessage="Revogar token" />}
       beforeTitle={<FontAwesomeIcon icon={faExclamationTriangle} />}
       afterTitle={
         <div className={styles.closeModalButton}>
@@ -36,34 +36,34 @@ export function RevokeTokenModal({ onClose, onRevoke, error, isPending }) {
             <p className={styleUtils.xsMarginBottom}>
               <FormattedMessage
                 id="revoke-token-modal.description1"
-                defaultMessage="Are you sure you want to revoke this token?"
+                defaultMessage="Você tem certeza que quer revogar este token?"
               />
             </p>
             <p>
               <FormattedMessage
                 id="revoke-token-modal.description2"
-                defaultMessage="Any scripts or requests relying on this token will lose access."
+                defaultMessage="Quaisquer scripts ou requisições à este token serão perdidos."
               />
             </p>
           </Column>
           <Row padding="sm" className={styles.revokeWarning}>
             <p>
-              <FormattedMessage id="revoke-token-modal.revoke-warning-1" defaultMessage="This action is" />{" "}
+              <FormattedMessage id="revoke-token-modal.revoke-warning-1" defaultMessage="Esta ação é" />{" "}
               <b>
-                <FormattedMessage id="revoke-token-modal.revoke-warning-2" defaultMessage="permanent" />
+                <FormattedMessage id="revoke-token-modal.revoke-warning-2" defaultMessage="permanente" />
               </b>{" "}
-              <FormattedMessage id="revoke-token-modal.revoke-warning-3" defaultMessage="and" />{" "}
+              <FormattedMessage id="revoke-token-modal.revoke-warning-3" defaultMessage="e" />{" "}
               <b>
-                <FormattedMessage id="revoke-token-modal.revoke-warning-4" defaultMessage="can not be undone." />
+                <FormattedMessage id="revoke-token-modal.revoke-warning-4" defaultMessage="não pode ser desfeita." />
               </b>
             </p>
           </Row>
           <Row spaceBetween padding="sm">
             <Button preset="basic" sm onClick={onClose}>
-              <FormattedMessage id="revoke-token-modal.cancel" defaultMessage="Cancel" />
+              <FormattedMessage id="revoke-token-modal.cancel" defaultMessage="Cancelar" />
             </Button>
             <Button preset="accent1" sm onClick={onRevoke}>
-              <FormattedMessage id="revoke-token-modal.revoke" defaultMessage="Revoke" />
+              <FormattedMessage id="revoke-token-modal.revoke" defaultMessage="Revogar" />
             </Button>
           </Row>
         </Column>

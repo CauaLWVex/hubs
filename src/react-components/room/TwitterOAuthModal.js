@@ -9,7 +9,7 @@ import { Column } from "../layout/Column";
 export function TwitterOAuthModal({ appName, onConnect, onClose }) {
   return (
     <Modal
-      title={<FormattedMessage id="twitter-oauth-modal.title" defaultMessage="Connect to Twitter" />}
+      title={<FormattedMessage id="twitter-oauth-modal.title" defaultMessage="Conectar ao Twitter" />}
       beforeTitle={<CloseButton onClick={onClose} />}
     >
       <Column padding center centerMd="both" grow>

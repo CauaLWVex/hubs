@@ -37,7 +37,7 @@ function ResetToDefaultButton({ onClick }) {
   const intl = useIntl();
   const title = intl.formatMessage({
     id: "preferences-screen.reset-to-default",
-    defaultMessage: "Reset preference to default"
+    defaultMessage: "Reiniciar configurações padrão"
   });
 
   return (
@@ -368,151 +368,151 @@ ListItem.propTypes = {
 const preferenceLabels = defineMessages({
   preferredCamera: {
     id: "preferences-screen.preference.preferred-camera",
-    defaultMessage: "Preferred camera"
+    defaultMessage: "Camêra principal"
   },
   preferredMic: {
     id: "preferences-screen.preference.preferred-mic",
-    defaultMessage: "Preferred mic"
+    defaultMessage: "Microfone principal"
   },
   muteMicOnEntry: {
     id: "preferences-screen.preference.mute-mic-on-entry",
-    defaultMessage: "Mute microphone on entry"
+    defaultMessage: "Mutar microfone ao entrar"
   },
   globalVoiceVolume: {
     id: "preferences-screen.preference.global-voice-volume",
-    defaultMessage: "Incoming Voice Volume"
+    defaultMessage: "Volume de Voz"
   },
   globalMediaVolume: {
     id: "preferences-screen.preference.global-media-volume",
-    defaultMessage: "Media Volume"
+    defaultMessage: "Volume de Mídia"
   },
   disableSoundEffects: {
     id: "preferences-screen.preference.disable-sound-effects",
-    defaultMessage: "Disable Sound Effects"
+    defaultMessage: "Desativar efeitos sonoros"
   },
   disableEchoCancellation: {
     id: "preferences-screen.preference.disable-echo-cancellation",
-    defaultMessage: "Disable microphone echo cancellation"
+    defaultMessage: "Desativar cancelação de eco do microfone"
   },
   disableNoiseSuppression: {
     id: "preferences-screen.preference.disable-noise-suppression",
-    defaultMessage: "Disable microphone noise supression"
+    defaultMessage: "Desativar supressão de ruído do microfone"
   },
   disableAutoGainControl: {
     id: "preferences-screen.preference.disable-auto-gain-control",
-    defaultMessage: "Disable microphone automatic gain control"
+    defaultMessage: "Desativar o controle de ganho automático do microfone"
   },
   snapRotationDegrees: {
     id: "preferences-screen.preference.snap-rotation-degrees",
-    defaultMessage: "Rotation per snap (in degrees)"
+    defaultMessage: "Rotação personagem por teclado (em graus)"
   },
   disableMovement: {
     id: "preferences-screen.preference.disable-movement",
-    defaultMessage: "Disable movement"
+    defaultMessage: "Desativar movimento"
   },
   disableBackwardsMovement: {
     id: "preferences-screen.preference.disable-backwards-movement",
-    defaultMessage: "Disable backwards movement"
+    defaultMessage: "Desativar movimento contrário"
   },
   disableStrafing: {
     id: "preferences-screen.preference.disable-strafing",
-    defaultMessage: "Disable strafing"
+    defaultMessage: "Desativar movimento lateral"
   },
   disableTeleporter: {
     id: "preferences-screen.preference.disable-teleporter",
-    defaultMessage: "Disable teleporter"
+    defaultMessage: "Desativar teleporte"
   },
   movementSpeedModifier: {
     id: "preferences-screen.preference.movement-speed-modifier",
-    defaultMessage: "Movement speed modifier"
+    defaultMessage: "Velocidade de movimento"
   },
   enableOnScreenJoystickLeft: {
     id: "preferences-screen.preference.enable-on-screen-joystick-left",
-    defaultMessage: "Enable left on-screen joystick for moving around"
+    defaultMessage: "Ativar joystick na esquerda para se mover"
   },
   enableOnScreenJoystickRight: {
     id: "preferences-screen.preference.enable-on-screen-joystick-right",
-    defaultMessage: "Enable right on-screen joystick for looking around"
+    defaultMessage: "Ativar joystick na direita para movimentar visão"
   },
   enableGyro: {
     id: "preferences-screen.preference.enable-gyro",
-    defaultMessage: "Enable gyroscope (when supported by browser/device)"
+    defaultMessage: "Habilitar giróscopio (quando suportado pelo navegador/dispositivo)"
   },
   invertTouchscreenCameraMove: {
     id: "preferences-screen.preference.invert-touchscreen-camera-move",
-    defaultMessage: "Invert direction of camera movement for touchscreens"
+    defaultMessage: "Inverter direção de movimento da camêra para touchscreens"
   },
   locale: {
     id: "preferences-screen.preference.locale",
-    defaultMessage: "Language"
+    defaultMessage: "Linguagem"
   },
   onlyShowNametagsInFreeze: {
     id: "preferences-screen.preference.only-show-nametags-in-freeze",
-    defaultMessage: "Only show nametags while frozen"
+    defaultMessage: "Mostrar nomes apenas quando congelados"
   },
   animateWaypointTransitions: {
     id: "preferences-screen.preference.animate-waypoint-transitions",
-    defaultMessage: "Animate waypoint transitions"
+    defaultMessage: "Animar transições"
   },
   showFPSCounter: {
     id: "preferences-screen.preference.show-fps-counter",
-    defaultMessage: "Show FPS Counter"
+    defaultMessage: "Mostrar Contador de FPS"
   },
   maxResolution: {
     id: "preferences-screen.preference.max-resolution",
-    defaultMessage: "Max Resolution"
+    defaultMessage: "Resolução Máxima"
   },
   materialQualitySetting: {
     id: "preferences-screen.preference.material-quality-setting",
-    defaultMessage: "Material quality"
+    defaultMessage: "Qualidade de material"
   },
   enableDynamicShadows: {
     id: "preferences-screen.preference.enable-dynamic-shadows",
-    defaultMessage: "Enable Dynamic Shadows"
+    defaultMessage: "Habilitar Sombras Dinâmicas"
   },
   disableAutoPixelRatio: {
     id: "preferences-screen.preference.disable-auto-pixel-ratio",
-    defaultMessage: "Disable automatic pixel ratio adjustments"
+    defaultMessage: "Desativar ajuste automático de proporção de pixels"
   },
   allowMultipleHubsInstances: {
     id: "preferences-screen.preference.allow-multiple-hubs-instances",
-    defaultMessage: "Disable auto-exit when multiple hubs instances are open"
+    defaultMessage: "Desativar saída automática quando várias instâncias do Metaverso estiverem abertas"
   },
   disableIdleDetection: {
     id: "preferences-screen.preference.disable-idle-detection",
-    defaultMessage: "Disable auto-exit when idle or backgrounded"
+    defaultMessage: "Desativar saída automática quando inativo ou em plano de fundo"
   },
   preferMobileObjectInfoPanel: {
     id: "preferences-screen.preference.prefer-mobile-object-info-panel",
-    defaultMessage: "Prefer Mobile Object Info Panel"
+    defaultMessage: "Dar Preferência ao Menu de Objetos Mobile"
   },
   showRtcDebugPanel: {
     id: "preferences-screen.preference.show-rtc-debug-panel",
-    defaultMessage: "Show RTC Panel"
+    defaultMessage: "Mostrar Painel RTC"
   },
   showAudioDebugPanel: {
     id: "preferences-screen.preference.show-audio-debug-panel",
-    defaultMessage: "Show Audio Debug Panel"
+    defaultMessage: "Mostrar Painel de Debug de Áudio"
   },
   enableAudioClipping: {
     id: "preferences-screen.preference.enable-audio-clipping",
-    defaultMessage: "Enable Audio Clipping"
+    defaultMessage: "Habilitar Clipes de Áudio"
   },
   audioClippingThreshold: {
     id: "preferences-screen.preference.audio-clipping-threshold",
-    defaultMessage: "Audio Clipping Threshold"
+    defaultMessage: "Limite de Clipe de Áudio"
   },
   theme: {
     id: "preferences-screen.preference.theme",
-    defaultMessage: "Theme"
+    defaultMessage: "Tema"
   },
   fastRoomSwitching: {
     id: "preferences-screen.preference.fast-room-switching",
-    defaultMessage: "Enable Fast Room Switching"
+    defaultMessage: "Habilitar Troca Rápida de Sala"
   },
   lazyLoadSceneMedia: {
     id: "preferences-screen.preference.lazy-load-scene-media",
-    defaultMessage: "Enable Scene Media Lazy Loading"
+    defaultMessage: "Habilitar Carregamento Lento de Mídia de Cena"
   }
 });
 
@@ -629,10 +629,10 @@ const CATEGORY_MOVEMENT = 3;
 const CATEGORY_TOUCHSCREEN = 4;
 const TOP_LEVEL_CATEGORIES = [CATEGORY_AUDIO, CATEGORY_CONTROLS, CATEGORY_MISC];
 const categoryNames = defineMessages({
-  [CATEGORY_AUDIO]: { id: "preferences-screen.category.audio", defaultMessage: "Audio" },
-  [CATEGORY_CONTROLS]: { id: "preferences-screen.category.controls", defaultMessage: "Controls" },
-  [CATEGORY_MISC]: { id: "preferences-screen.category.misc", defaultMessage: "Misc" },
-  [CATEGORY_MOVEMENT]: { id: "preferences-screen.category.movement", defaultMessage: "Movement" },
+  [CATEGORY_AUDIO]: { id: "preferences-screen.category.audio", defaultMessage: "Áudio" },
+  [CATEGORY_CONTROLS]: { id: "preferences-screen.category.controls", defaultMessage: "Controles" },
+  [CATEGORY_MISC]: { id: "preferences-screen.category.misc", defaultMessage: "Outros" },
+  [CATEGORY_MOVEMENT]: { id: "preferences-screen.category.movement", defaultMessage: "Movimento" },
   [CATEGORY_TOUCHSCREEN]: { id: "preferences-screen.category.touchscreen", defaultMessage: "Touchscreen" }
 });
 
@@ -660,7 +660,7 @@ function CloseButton({ onClick }) {
       autoFocus
       aria-label={intl.formatMessage({
         id: "preferences-screen.close-button",
-        defaultMessage: "Close Preferences Menu"
+        defaultMessage: "Fechar Menu de Configurações"
       })}
       className={classNames(styles.closeButton)}
       onClick={onClick}
@@ -760,7 +760,7 @@ class RefreshPrompt extends React.Component {
           <div className={styles.refreshPrompt}>
             <FormattedMessage
               id="preferences-screen.prompt-for-refresh"
-              defaultMessage="Your preferences are saved, but some of your changes will not take effect until you refresh the page."
+              defaultMessage="Suas configurações estão salvas, mas algumas modificações só terão efeito após recarregar a página."
             />
           </div>
           <div className={styles.warnIconPlaceholder} />
@@ -772,7 +772,7 @@ class RefreshPrompt extends React.Component {
             location.href = href;
           }}
         >
-          <FormattedMessage id="preferences-screen.refresh-now" defaultMessage="Refresh Now" />
+          <FormattedMessage id="preferences-screen.refresh-now" defaultMessage="Recarregar Agora" />
         </button>
       </div>
     );
@@ -841,7 +841,7 @@ class PreferencesScreen extends Component {
         value: "none",
         text: this.props.intl.formatMessage({
           id: "preferences-screen.preferred-mic.default",
-          defaultMessage: "None"
+          defaultMessage: "Nenhum"
         })
       }
     ];
@@ -859,21 +859,21 @@ class PreferencesScreen extends Component {
         value: "user",
         text: this.props.intl.formatMessage({
           id: "preferences-screen.preferred-camera.user-facing",
-          defaultMessage: "User-Facing"
+          defaultMessage: "Encarando o usuário"
         })
       },
       {
         value: "environment",
         text: this.props.intl.formatMessage({
           id: "preferences-screen.preferred-camera.environment",
-          defaultMessage: "Environment"
+          defaultMessage: "Ambiente"
         })
       },
       {
         value: "default",
         text: this.props.intl.formatMessage({
           id: "preferences-screen.preferred-camera.default",
-          defaultMessage: "Default"
+          defaultMessage: "Padrão"
         })
       }
     ];
@@ -911,7 +911,7 @@ class PreferencesScreen extends Component {
 
     const browserDefault = intl.formatMessage({
       id: "preferences-screen.browser-default",
-      defaultMessage: "Browser Default"
+      defaultMessage: "Padrão do Navegador"
     });
 
     const availableLocales = [
@@ -1062,21 +1062,21 @@ class PreferencesScreen extends Component {
                 value: "low",
                 text: intl.formatMessage({
                   id: "preferences-screen.material-quality-setting.low",
-                  defaultMessage: "Low"
+                  defaultMessage: "Baixa"
                 })
               },
               {
                 value: "medium",
                 text: intl.formatMessage({
                   id: "preferences-screen.material-quality-setting.medium",
-                  defaultMessage: "Medium"
+                  defaultMessage: "Média"
                 })
               },
               {
                 value: "high",
                 text: intl.formatMessage({
                   id: "preferences-screen.material-quality-setting.high",
-                  defaultMessage: "High"
+                  defaultMessage: "Alta"
                 })
               }
             ],
@@ -1152,7 +1152,7 @@ class PreferencesScreen extends Component {
                 this.setState({ category });
               }}
               ariaLabel={intl.formatMessage(
-                { id: "preferences-screen.select-category ", defaultMessage: "Select category {categoryName}" },
+                { id: "preferences-screen.select-category ", defaultMessage: "Selecione a categoria {categoryName}" },
                 {
                   categoryName: intl.formatMessage(categoryNames[category])
                 }

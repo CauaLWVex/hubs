@@ -18,7 +18,7 @@ export const RevealTokenModal = ({ token, selectedScopes, onClose }) => {
     <Modal
       titleNode={
         <h2>
-          <FormattedMessage id="save-api-token.title" defaultMessage="API Token" />
+          <FormattedMessage id="save-api-token.title" defaultMessage="Token de API" />
         </h2>
       }
       afterTitle={<CloseModalButton onClose={onClose} />}
@@ -30,31 +30,31 @@ export const RevealTokenModal = ({ token, selectedScopes, onClose }) => {
           <b>
             <FormattedMessage
               id="save-api-token.description1"
-              defaultMessage="Please save this API token in a safe place."
+              defaultMessage="Por favor salve este token em um lugar seguro."
             />
           </b>
           <br />
           <FormattedMessage
             id="save-api-token.description2"
-            defaultMessage="You will not be able to see it again once you have closed this window."
+            defaultMessage="Você não poderá vê-lo novamente depois de fechar esta janela."
           />
         </p>
         <CopyableTextInputField
           buttonPreset="accent6"
           className={styles.maxWidthAuto}
           inputClassName={classNames(styles.backgroundDarkGrey, styles.textWhite)}
-          label={<FormattedMessage id="save-api-token.copy-label" defaultMessage="API Token" />}
+          label={<FormattedMessage id="save-api-token.copy-label" defaultMessage="Token de API" />}
           value={token}
           description={
             <p>
-              <FormattedMessage id="save-api-token.copied" defaultMessage="Copied" />
+              <FormattedMessage id="save-api-token.copied" defaultMessage="Copiado" />
             </p>
           }
         />
         <Row padding="sm" className={styles.backgroundLightGrey}>
           <p>
             <b>
-              <FormattedMessage id="save-api-token.scopes" defaultMessage="Scopes" />:
+              <FormattedMessage id="save-api-token.scopes" defaultMessage="Escopos" />:
             </b>{" "}
             {selectedScopes &&
               selectedScopes.map((scopeName, idx) => `${scopeName}${selectedScopes.length - 1 > idx ? ", " : ""}`)}
@@ -62,7 +62,7 @@ export const RevealTokenModal = ({ token, selectedScopes, onClose }) => {
         </Row>
         <Center>
           <Button preset="primary" sm onClick={onClose}>
-            <FormattedMessage id="save-api-token.revoke" defaultMessage="Confirm and close" />
+            <FormattedMessage id="save-api-token.revoke" defaultMessage="Confirmar e fechar" />
           </Button>
         </Center>
       </Column>

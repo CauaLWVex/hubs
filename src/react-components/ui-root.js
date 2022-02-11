@@ -782,7 +782,7 @@ class UIRoot extends Component {
     return (
       <div className={styles.interstitial} onClick={() => this.props.onInterstitialPromptClicked()}>
         <div>
-          <FormattedMessage id="ui-root.interstitial-prompt" defaultMessage="Continue" />
+          <FormattedMessage id="ui-root.interstitial-prompt" defaultMessage="Continuar" />
         </div>
       </div>
     );
@@ -1113,7 +1113,7 @@ class UIRoot extends Component {
           this.state.signedIn
             ? {
                 id: "sign-out",
-                label: <FormattedMessage id="more-menu.sign-out" defaultMessage="Sign Out" />,
+                label: <FormattedMessage id="more-menu.sign-out" defaultMessage="Sair" />,
                 icon: LeaveIcon,
                 onClick: async () => {
                   await this.props.authChannel.signOut(this.props.hubChannel);
@@ -1122,13 +1122,13 @@ class UIRoot extends Component {
               }
             : {
                 id: "sign-in",
-                label: <FormattedMessage id="more-menu.sign-in" defaultMessage="Sign In" />,
+                label: <FormattedMessage id="more-menu.sign-in" defaultMessage="Entrar" />,
                 icon: EnterIcon,
                 onClick: () => this.showContextualSignInDialog()
               },
           canCreateRoom && {
             id: "create-room",
-            label: <FormattedMessage id="more-menu.create-room" defaultMessage="Create Room" />,
+            label: <FormattedMessage id="more-menu.create-room" defaultMessage="Criar Sala" />,
             icon: AddIcon,
             onClick: () =>
               this.showNonHistoriedDialog(LeaveRoomModal, {
@@ -1138,13 +1138,13 @@ class UIRoot extends Component {
           },
           {
             id: "user-profile",
-            label: <FormattedMessage id="more-menu.profile" defaultMessage="Change Name & Avatar" />,
+            label: <FormattedMessage id="more-menu.profile" defaultMessage="Alterar Nome & Avatar" />,
             icon: AvatarIcon,
             onClick: () => this.setSidebar("profile")
           },
           {
             id: "favorite-rooms",
-            label: <FormattedMessage id="more-menu.favorite-rooms" defaultMessage="Favorite Rooms" />,
+            label: <FormattedMessage id="more-menu.favorite-rooms" defaultMessage="Salas Favoritas" />,
             icon: FavoritesIcon,
             onClick: () =>
               this.props.performConditionalSignIn(
@@ -1158,7 +1158,7 @@ class UIRoot extends Component {
           },
           {
             id: "preferences",
-            label: "Preferences",
+            label: "Configurações",
             icon: SettingsIcon,
             onClick: () => this.setState({ showPrefs: true })
           }
@@ -1166,31 +1166,31 @@ class UIRoot extends Component {
       },
       {
         id: "room",
-        label: <FormattedMessage id="more-menu.room" defaultMessage="Room" />,
+        label: <FormattedMessage id="more-menu.room" defaultMessage="Sala" />,
         items: [
           {
             id: "room-info",
-            label: <FormattedMessage id="more-menu.room-info" defaultMessage="Room Info and Settings" />,
+            label: <FormattedMessage id="more-menu.room-info" defaultMessage="Informações da Sala e configurações" />,
             icon: HomeIcon,
             onClick: () => this.setSidebar("room-info")
           },
           (this.props.breakpoint === "sm" || this.props.breakpoint === "md") &&
             (this.props.hub.entry_mode !== "invite" || this.props.hubChannel.can("update_hub")) && {
               id: "invite",
-              label: <FormattedMessage id="more-menu.invite" defaultMessage="Invite" />,
+              label: <FormattedMessage id="more-menu.invite" defaultMessage="Convite" />,
               icon: InviteIcon,
               onClick: () => this.props.scene.emit("action_invite")
             },
           this.isFavorited()
             ? {
                 id: "unfavorite-room",
-                label: <FormattedMessage id="more-menu.unfavorite-room" defaultMessage="Unfavorite Room" />,
+                label: <FormattedMessage id="more-menu.unfavorite-room" defaultMessage="Desfavoritar Sala" />,
                 icon: StarIcon,
                 onClick: () => this.toggleFavorited()
               }
             : {
                 id: "favorite-room",
-                label: <FormattedMessage id="more-menu.favorite-room" defaultMessage="Favorite Room" />,
+                label: <FormattedMessage id="more-menu.favorite-room" defaultMessage="Favoritar Sala" />,
                 icon: StarOutlineIcon,
                 onClick: () => this.toggleFavorited()
               },
@@ -1198,9 +1198,9 @@ class UIRoot extends Component {
             entered && {
               id: "streamer-mode",
               label: streaming ? (
-                <FormattedMessage id="more-menu.exit-streamer-mode" defaultMessage="Exit Streamer Mode" />
+                <FormattedMessage id="more-menu.exit-streamer-mode" defaultMessage="Sair do Modo Streamer" />
               ) : (
-                <FormattedMessage id="more-menu.enter-streamer-mode" defaultMessage="Enter Streamer Mode" />
+                <FormattedMessage id="more-menu.enter-streamer-mode" defaultMessage="Entrar no Modo Streamer" />
               ),
               icon: CameraIcon,
               onClick: () => this.toggleStreamerMode()
@@ -1208,7 +1208,7 @@ class UIRoot extends Component {
           (this.props.breakpoint === "sm" || this.props.breakpoint === "md") &&
             entered && {
               id: "leave-room",
-              label: <FormattedMessage id="more-menu.enter-leave-room" defaultMessage="Leave Room" />,
+              label: <FormattedMessage id="more-menu.enter-leave-room" defaultMessage="Sair da Sala" />,
               icon: LeaveIcon,
               onClick: () => {
                 this.showNonHistoriedDialog(LeaveRoomModal, {
@@ -1219,7 +1219,7 @@ class UIRoot extends Component {
             },
           canCloseRoom && {
             id: "close-room",
-            label: <FormattedMessage id="more-menu.close-room" defaultMessage="Close Room" />,
+            label: <FormattedMessage id="more-menu.close-room" defaultMessage="Fechar Sala" />,
             icon: DeleteIcon,
             onClick: () =>
               this.props.performConditionalSignIn(
@@ -1239,53 +1239,53 @@ class UIRoot extends Component {
       },
       {
         id: "support",
-        label: <FormattedMessage id="more-menu.support" defaultMessage="Support" />,
+        label: <FormattedMessage id="more-menu.support" defaultMessage="Suporte" />,
         items: [
           configs.feature("show_community_link") && {
             id: "community",
-            label: <FormattedMessage id="more-menu.community" defaultMessage="Community" />,
+            label: <FormattedMessage id="more-menu.community" defaultMessage="Comunidade" />,
             icon: DiscordIcon,
             href: configs.link("community", "https://discord.gg/dFJncWwHun")
           },
           configs.feature("show_issue_report_link") && {
             id: "report-issue",
-            label: <FormattedMessage id="more-menu.report-issue" defaultMessage="Report Issue" />,
+            label: <FormattedMessage id="more-menu.report-issue" defaultMessage="Reportar Problema" />,
             icon: WarningCircleIcon,
             href: configs.link("issue_report", "https://hubs.mozilla.com/docs/help.html")
           },
           entered && {
             id: "start-tour",
-            label: <FormattedMessage id="more-menu.start-tour" defaultMessage="Start Tour" />,
+            label: <FormattedMessage id="more-menu.start-tour" defaultMessage="Começar Tour" />,
             icon: SupportIcon,
             onClick: () => this.props.scene.systems.tips.resetTips()
           },
           configs.feature("show_docs_link") && {
             id: "help",
-            label: <FormattedMessage id="more-menu.help" defaultMessage="Help" />,
+            label: <FormattedMessage id="more-menu.help" defaultMessage="Ajuda" />,
             icon: SupportIcon,
             href: configs.link("docs", "https://hubs.mozilla.com/docs")
           },
           configs.feature("show_controls_link") && {
             id: "controls",
-            label: <FormattedMessage id="more-menu.controls" defaultMessage="Controls" />,
+            label: <FormattedMessage id="more-menu.controls" defaultMessage="Controles" />,
             icon: SupportIcon,
             href: configs.link("controls", "https://hubs.mozilla.com/docs/hubs-controls.html")
           },
           configs.feature("show_whats_new_link") && {
             id: "whats-new",
-            label: <FormattedMessage id="more-menu.whats-new" defaultMessage="What's New" />,
+            label: <FormattedMessage id="more-menu.whats-new" defaultMessage="Novidades" />,
             icon: SupportIcon,
             href: "/whats-new"
           },
           configs.feature("show_terms") && {
             id: "tos",
-            label: <FormattedMessage id="more-menu.tos" defaultMessage="Terms of Service" />,
+            label: <FormattedMessage id="more-menu.tos" defaultMessage="Termos de Serviço" />,
             icon: TextDocumentIcon,
             href: configs.link("terms_of_use", "https://github.com/mozilla/hubs/blob/master/TERMS.md")
           },
           configs.feature("show_privacy") && {
             id: "privacy",
-            label: <FormattedMessage id="more-menu.privacy" defaultMessage="Privacy Notice" />,
+            label: <FormattedMessage id="more-menu.privacy" defaultMessage="Nota de Privacidade" />,
             icon: ShieldIcon,
             href: configs.link("privacy_notice", "https://github.com/mozilla/hubs/blob/master/PRIVACY.md")
           }
@@ -1539,7 +1539,7 @@ class UIRoot extends Component {
                       <>
                         <ToolbarButton
                           icon={<EnterIcon />}
-                          label={<FormattedMessage id="toolbar.join-room-button" defaultMessage="Join Room" />}
+                          label={<FormattedMessage id="toolbar.join-room-button" defaultMessage="Entrar na Sala" />}
                           preset="accept"
                           onClick={() => this.setState({ watching: false })}
                         />
@@ -1548,7 +1548,7 @@ class UIRoot extends Component {
                             icon={<VRIcon />}
                             preset="accent5"
                             label={
-                              <FormattedMessage id="toolbar.spectate-in-vr-button" defaultMessage="Spectate in VR" />
+                              <FormattedMessage id="toolbar.spectate-in-vr-button" defaultMessage="Assistir em VR" />
                             }
                             onClick={() => this.props.scene.enterVR()}
                           />
@@ -1578,7 +1578,7 @@ class UIRoot extends Component {
                           className={styleUtils.hideLg}
                           icon={<VRIcon />}
                           preset="accept"
-                          label={<FormattedMessage id="toolbar.enter-vr-button" defaultMessage="Enter VR" />}
+                          label={<FormattedMessage id="toolbar.enter-vr-button" defaultMessage="Entrar no VR" />}
                           onClick={() => exit2DInterstitialAndEnterVR(true)}
                         />
                       )}
@@ -1591,14 +1591,14 @@ class UIRoot extends Component {
                         <ToolbarButton
                           icon={<VRIcon />}
                           preset="accept"
-                          label={<FormattedMessage id="toolbar.enter-vr-button" defaultMessage="Enter VR" />}
+                          label={<FormattedMessage id="toolbar.enter-vr-button" defaultMessage="Entrar no VR" />}
                           onClick={() => exit2DInterstitialAndEnterVR(true)}
                         />
                       )}
                     {entered && (
                       <ToolbarButton
                         icon={<LeaveIcon />}
-                        label={<FormattedMessage id="toolbar.leave-room-button" defaultMessage="Leave" />}
+                        label={<FormattedMessage id="toolbar.leave-room-button" defaultMessage="Sair" />}
                         preset="cancel"
                         onClick={() => {
                           this.showNonHistoriedDialog(LeaveRoomModal, {

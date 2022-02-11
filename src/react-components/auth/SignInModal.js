@@ -17,63 +17,63 @@ export const SignInStep = {
 export const SignInMessages = defineMessages({
   pin: {
     id: "sign-in-modal.signin-message.pin",
-    defaultMessage: "You'll need to sign in to pin objects."
+    defaultMessage: "Você precisa entrar para fixar objetos."
   },
   unpin: {
     id: "sign-in-modal.signin-message.unpin",
-    defaultMessage: "You'll need to sign in to un-pin objects."
+    defaultMessage: "Você precisa entrar para desfixar objetos."
   },
   changeScene: {
     id: "sign-in-modal.signin-message.change-scene",
-    defaultMessage: "You'll need to sign in to change the scene."
+    defaultMessage: "Você precisa entrar para mudar a cena."
   },
   roomSettings: {
     id: "sign-in-modal.signin-message.room-settings",
-    defaultMessage: "You'll need to sign in to change the room's settings."
+    defaultMessage: "Você precisa entrar para mudar as configurações da sala."
   },
   closeRoom: {
     id: "sign-in-modal.signin-message.close-room",
-    defaultMessage: "You'll need to sign in to close the room."
+    defaultMessage: "Você precisa entrar para fechar a sala."
   },
   muteUser: {
     id: "sign-in-modal.signin-message.mute-user",
-    defaultMessage: "You'll need to sign in to mute other users."
+    defaultMessage: "Você precisa entrar para silenciar outros usuários."
   },
   kickUser: {
     id: "sign-in-modal.signin-message.kick-user",
-    defaultMessage: "You'll need to sign in to kick other users."
+    defaultMessage: "Você precisa entrar para expulsar outros usuários."
   },
   addOwner: {
     id: "sign-in-modal.signin-message.add-owner",
-    defaultMessage: "You'll need to sign in to assign moderators."
+    defaultMessage: "Você precisa entrar para designar moderadores."
   },
   removeOwner: {
     id: "sign-in-modal.signin-message.remove-owner",
-    defaultMessage: "You'll need to sign in to assign moderators."
+    defaultMessage: "Você precisa entrar para remover moderadores."
   },
   createAvatar: {
     id: "sign-in-modal.signin-message.create-avatar",
-    defaultMessage: "You'll need to sign in to create avatars."
+    defaultMessage: "Você precisa entrar para criar avatares."
   },
   remixAvatar: {
     id: "sign-in-modal.signin-message.remix-avatar",
-    defaultMessage: "You'll need to sign in to remix avatars."
+    defaultMessage: "Você precisa entrar para editar avatares."
   },
   remixScene: {
     id: "sign-in-modal.signin-message.remix-scene",
-    defaultMessage: "You'll need to sign in to remix scenes."
+    defaultMessage: "Você precisa entrar para editar cenas."
   },
   favoriteRoom: {
     id: "sign-in-modal.signin-message.favorite-room",
-    defaultMessage: "You'll need to sign in to add this room to your favorites."
+    defaultMessage: "Você precisa entrar para adicionar esta sala aos seus favoritos."
   },
   favoriteRooms: {
     id: "sign-in-modal.signin-message.favorite-rooms",
-    defaultMessage: "You'll need to sign in to add favorite rooms."
+    defaultMessage: "Você precisa entrar para adicionar salas favoritas."
   },
   tweet: {
     id: "sign-in-modal.signin-message.tweet",
-    defaultMessage: "You'll need to sign in to send tweets."
+    defaultMessage: "Você precisa entrar para enviar tweets."
   }
 });
 
@@ -103,7 +103,7 @@ export function SubmitEmail({ onSubmitEmail, initialEmail, privacyUrl, termsUrl,
         {message ? (
           intl.formatMessage(message)
         ) : (
-          <FormattedMessage id="sign-in-modal.prompt" defaultMessage="Please Sign In" />
+          <FormattedMessage id="sign-in-modal.prompt" defaultMessage="Por Favor Entra na sua Conta" />
         )}
       </p>
       <TextInputField
@@ -112,7 +112,7 @@ export function SubmitEmail({ onSubmitEmail, initialEmail, privacyUrl, termsUrl,
         required
         value={email}
         onChange={onChangeEmail}
-        placeholder="example@example.com"
+        placeholder="exemplo@exemplo.com"
       />
       <p>
         <small>
@@ -141,7 +141,7 @@ export function WaitForVerification({ email, onCancel, showNewsletterSignup }) {
     <Column center padding>
       <FormattedMessage
         id="sign-in-modal.wait-for-verification"
-        defaultMessage="<p>Email sent to {email}!</p><p>To continue, click on the link in the email using your phone, tablet, or PC.</p><p>No email? You may not be able to create an account.</p>"
+        defaultMessage="<p>Email enviado para {email}!</p><p>Para continuar, clique no link enviado no email.</p><p>Sem email? Você pode não ser capaz de criar uma conta.</p>"
         // eslint-disable-next-line react/display-name
         values={{ email, p: chunks => <p>{chunks}</p> }}
       />
@@ -150,11 +150,11 @@ export function WaitForVerification({ email, onCancel, showNewsletterSignup }) {
           <small>
             <FormattedMessage
               id="sign-in-modal.newsletter-signup-question"
-              defaultMessage="Want Hubs news sent to your inbox?"
+              defaultMessage="Deseja receber as novidades no seu email?"
             />
             <br />
             <a href="https://eepurl.com/gX_fH9" target="_blank" rel="noopener noreferrer">
-              <FormattedMessage id="sign-in-modal.newsletter-signup-link" defaultMessage="Subscribe for updates" />
+              <FormattedMessage id="sign-in-modal.newsletter-signup-link" defaultMessage="Inscreva-se para atualizações" />
             </a>
           </small>
         </p>
@@ -180,7 +180,7 @@ export function SignInComplete({ message, onContinue }) {
           {message ? (
             intl.formatMessage(message)
           ) : (
-            <FormattedMessage id="sign-in-modal.complete" defaultMessage="You are now signed in." />
+            <FormattedMessage id="sign-in-modal.complete" defaultMessage="Você entrou." />
           )}
         </b>
       </p>
@@ -197,7 +197,7 @@ SignInComplete.propTypes = {
 export function SignInModal({ closeable, onClose, children, ...rest }) {
   return (
     <Modal
-      title={<FormattedMessage id="sign-in-modal.title" defaultMessage="Sign In" />}
+      title={<FormattedMessage id="sign-in-modal.title" defaultMessage="Entre" />}
       beforeTitle={closeable && <CloseButton onClick={onClose} />}
       {...rest}
     >

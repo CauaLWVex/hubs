@@ -81,7 +81,7 @@ export function ChatLengthWarning({ messageLength, maxLength }) {
         [styles.warningTextColor]: messageLength > maxLength
       })}
     >
-      <FormattedMessage id="chat-message-input.warning-max-characters" defaultMessage="Max characters" />
+      <FormattedMessage id="chat-message-input.warning-max-characters" defaultMessage="Máximo de carácteres" />
       {` (${messageLength}/${maxLength})`}
     </p>
   );
@@ -100,7 +100,7 @@ export function ChatInput({ warning, isOverMaxLength, ...props }) {
       <TextAreaInput
         textInputStyles={styles.chatInputTextAreaStyles}
         className={classNames({ [styles.warningBorder]: isOverMaxLength })}
-        placeholder={intl.formatMessage({ id: "chat-sidebar.input.placeholder", defaultMessage: "Message..." })}
+        placeholder={intl.formatMessage({ id: "chat-sidebar.input.placeholder", defaultMessage: "Mensagem..." })}
         {...props}
       />
       {warning}
@@ -115,13 +115,13 @@ ChatInput.propTypes = {
 };
 
 const enteredMessages = defineMessages({
-  room: { id: "chat-sidebar.system-message.entered-room", defaultMessage: "{name} entered the room." },
-  lobby: { id: "chat-sidebar.system-message.entered-lobby", defaultMessage: "{name} entered the lobby." }
+  room: { id: "chat-sidebar.system-message.entered-room", defaultMessage: "{name} entrou na sala." },
+  lobby: { id: "chat-sidebar.system-message.entered-lobby", defaultMessage: "{name} entrou no lobby." }
 });
 
 const joinedMessages = defineMessages({
-  lobby: { id: "chat-sidebar.system-message.joined-lobby", defaultMessage: "{name} joined the lobby." },
-  room: { id: "chat-sidebar.system-message.joined-room", defaultMessage: "{name} joined the room." }
+  lobby: { id: "chat-sidebar.system-message.joined-lobby", defaultMessage: "{name} juntou-se ao lobby." },
+  room: { id: "chat-sidebar.system-message.joined-room", defaultMessage: "{name} juntou-se à sala." }
 });
 
 export const LogMessageType = {
@@ -151,88 +151,88 @@ export const LogMessageType = {
 const logMessages = defineMessages({
   [LogMessageType.roomEntryRequired]: {
     id: "chat-sidebar.log-message.room-entry-required",
-    defaultMessage: "You must enter the room to use this command."
+    defaultMessage: "Você precisa entrar na sala para usar este comando."
   },
   [LogMessageType.flyModeDisabled]: {
     id: "chat-sidebar.log-message.fly-mode-disabled",
-    defaultMessage: "Fly mode disabled."
+    defaultMessage: "Modo de voo desativado."
   },
   [LogMessageType.flyModeEnabled]: {
     id: "chat-sidebar.log-message.fly-mode-enabled",
-    defaultMessage: "Fly mode enabled."
+    defaultMessage: "Modo de voo ativado."
   },
   [LogMessageType.unauthorizedSceneChange]: {
     id: "chat-sidebar.log-message.unauthorized-scene-change",
-    defaultMessage: "You do not have permission to change the scene."
+    defaultMessage: "Você não tem permissão para mudar a sala."
   },
   [LogMessageType.invalidSceneUrl]: {
     id: "chat-sidebar.log-message.invalid-scene-url",
-    defaultMessage: "This URL does not point to a scene or valid GLB."
+    defaultMessage: "Essa URL não aponta para uma cena ou um GLB válido."
   },
   [LogMessageType.unauthorizedRoomRename]: {
     id: "chat-sidebar.log-message.unauthorized-room-rename",
-    defaultMessage: "You do not have permission to rename this room."
+    defaultMessage: "Você não tem permissão para renomear esta sala."
   },
   [LogMessageType.captureUnavailable]: {
     id: "chat-sidebar.log-message.capture-unavailable",
-    defaultMessage: "Capture unavailable."
+    defaultMessage: "Captura indisponível."
   },
   [LogMessageType.captureStopped]: {
     id: "chat-sidebar.log-message.capture-stopped",
-    defaultMessage: "Capture stopped."
+    defaultMessage: "Captura encerrada."
   },
   [LogMessageType.captureStarted]: {
     id: "chat-sidebar.log-message.capture-started",
-    defaultMessage: "Capture started."
+    defaultMessage: "Captura iniciada."
   },
   [LogMessageType.captureAlreadyStopped]: {
     id: "chat-sidebar.log-message.capture-already-stopped",
-    defaultMessage: "Capture already stopped."
+    defaultMessage: "Captura já encerrada."
   },
   [LogMessageType.captureAlreadyRunning]: {
     id: "chat-sidebar.log-message.capture-already-running",
-    defaultMessage: "Capture already running."
+    defaultMessage: "Captura já iniciada."
   },
   [LogMessageType.positionalAudioEnabled]: {
     id: "chat-sidebar.log-message.positional-audio-enabled",
-    defaultMessage: "Positional audio enabled."
+    defaultMessage: "Áudio posicional ativado."
   },
   [LogMessageType.positionalAudioDisabled]: {
     id: "chat-sidebar.log-message.positional-audio-disabled",
-    defaultMessage: "Positional audio disabled."
+    defaultMessage: "Áudio posicional desativado."
   },
   [LogMessageType.setAudioNormalizationFactor]: {
     id: "chat-sidebar.log-message.set-audio-normalization-factor",
-    defaultMessage: "audioNormalization factor is set to {factor}."
+    defaultMessage: "audioNormalization está setado para {factor}."
   },
   [LogMessageType.audioNormalizationDisabled]: {
     id: "chat-sidebar.log-message.audio-normalization-disabled",
-    defaultMessage: "audioNormalization is disabled."
+    defaultMessage: "audioNormalization está desativado."
   },
   [LogMessageType.audioNormalizationNaN]: {
     id: "chat-sidebar.log-message.audio-normalization-nan",
-    defaultMessage: "audioNormalization command needs a valid number parameter."
+    defaultMessage: "comando de audioNormalization precisa de um parâmetro numérico válido."
   },
   [LogMessageType.invalidAudioNormalizationRange]: {
     id: "chat-sidebar.log-message.invalid-audio-normalization-range",
     defaultMessage:
-      "audioNormalization command needs a base volume number between 0 [no normalization] and 255. Default is 0. The recommended value is 4, if you would like to enable normalization."
+      "comando de audioNormalization precisa de um número base entre 0 [no normalization] e 255. O padrão é 0. Se você quer habilitar a normalização o valor recomendado é 4."
   },
   [LogMessageType.audioSuspended]: {
     id: "chat-sidebar.log-message.audio-suspended",
-    defaultMessage: "Audio has been suspended, click somewhere in the room to resume the audio."
+    defaultMessage: "O áudio foi suspenso, clique em algum lugar da sala para reativa-lo."
   },
   [LogMessageType.audioResumed]: {
     id: "chat-sidebar.log-message.audio-resumed",
-    defaultMessage: "Audio has been resumed."
+    defaultMessage: "O áudio foi reativado."
   },
   [LogMessageType.joinFailed]: {
     id: "chat-sidebar.log-message.join-failed",
-    defaultMessage: "Failed to join room: {message}"
+    defaultMessage: "Falha ao entrar na sala: {message}"
   },
   [LogMessageType.avatarChanged]: {
     id: "chat-sidebar.log-message.avatar-changed",
-    defaultMessage: "Your avatar has been changed."
+    defaultMessage: "Seu Avatar foi alterado."
   }
 });
 
@@ -247,7 +247,7 @@ export function formatSystemMessage(entry, intl) {
       return (
         <FormattedMessage
           id="chat-sidebar.system-message.leave"
-          defaultMessage="{name} left."
+          defaultMessage="{name} saiu."
           values={{ name: <b>{entry.name}</b> }}
         />
       );
@@ -255,7 +255,7 @@ export function formatSystemMessage(entry, intl) {
       return (
         <FormattedMessage
           id="chat-sidebar.system-message.name-change"
-          defaultMessage="{oldName} is now known as {newName}"
+          defaultMessage="{oldName} agora é conhecido como {newName}"
           values={{ oldName: <b>{entry.oldName}</b>, newName: <b>{entry.newName}</b> }}
         />
       );
@@ -263,7 +263,7 @@ export function formatSystemMessage(entry, intl) {
       return (
         <FormattedMessage
           id="chat-sidebar.system-message.scene-change"
-          defaultMessage="{name} changed the scene to {sceneName}"
+          defaultMessage="{name} mudou a cena para {sceneName}"
           values={{ name: <b>{entry.name}</b>, sceneName: <b>{entry.sceneName}</b> }}
         />
       );
@@ -271,7 +271,7 @@ export function formatSystemMessage(entry, intl) {
       return (
         <FormattedMessage
           id="chat-sidebar.system-message.hub-name-change"
-          defaultMessage="{name} changed the name of the room to {hubName}"
+          defaultMessage="{name} mudou o nome da sala para {hubName}"
           values={{ name: <b>{entry.name}</b>, hubName: <b>{entry.hubName}</b> }}
         />
       );
@@ -279,7 +279,7 @@ export function formatSystemMessage(entry, intl) {
       return (
         <FormattedMessage
           id="chat-sidebar.system-message.hub-change"
-          defaultMessage="You are now in {hubName}"
+          defaultMessage="Você agora está em {hubName}"
           values={{ hubName: <b>{entry.hubName}</b> }}
         />
       );

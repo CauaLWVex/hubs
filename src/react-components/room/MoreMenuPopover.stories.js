@@ -62,7 +62,7 @@ const menu = [
       },
       {
         id: "privacy",
-        label: "Privacy Notice",
+        label: "Nota de Privacidade",
         icon: ShieldIcon,
         href: "https://github.com/mozilla/hubs/blob/master/PRIVACY.md"
       }

@@ -54,7 +54,7 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
 
   return (
     <Modal
-      title={<FormattedMessage id="object-url-modal.title" defaultMessage="Custom Object" />}
+      title={<FormattedMessage id="object-url-modal.title" defaultMessage="Objeto Customizado" />}
       beforeTitle={<CloseButton onClick={onClose} />}
     >
       <Column as="form" padding center onSubmit={handleSubmit(onSubmit)}>
@@ -62,7 +62,7 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
           {showModelCollectionLink ? (
             <FormattedMessage
               id="object-url-modal.message-with-collection"
-              defaultMessage="Upload or paste a URL to an image, video, model, or scene. Models can be found on <sketchfablink>Sketchfab</sketchfablink> or our <collectionlink>collection</collectionlink>."
+              defaultMessage="Anexe ou copie o link para uma imagem, vídeo, modelo, ou cena. Modelos podem ser encontrados no <sketchfablink>Sketchfab</sketchfablink> ou na nossa <collectionlink>coleção</collectionlink>."
               values={{
                 // eslint-disable-next-line react/display-name
                 sketchfablink: chunks => (
@@ -85,7 +85,7 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
           ) : (
             <FormattedMessage
               id="object-url-modal.message"
-              defaultMessage="Upload or paste a URL to an image, video, model, or scene. Models can be found on <sketchfablink>Sketchfab</sketchfablink>."
+              defaultMessage="Anexe ou copie o link para uma imagem, vídeo, modelo, ou cena. Modelos podem ser encontrados no <sketchfablink>Sketchfab</sketchfablink>."
               values={{
                 // eslint-disable-next-line react/display-name
                 sketchfablink: chunks => (
@@ -103,10 +103,10 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
         </p>
         <TextInputField
           name="url"
-          label={<FormattedMessage id="object-url-modal.url-field-label" defaultMessage="Object URL or File" />}
-          placeholder="https://example.com/avatar.glb"
+          label={<FormattedMessage id="object-url-modal.url-field-label" defaultMessage="Arquivo ou URL do objeto" />}
+          placeholder="https://exemplo.com/avatar.glb"
           type={hasFile ? "text" : "url"}
-          value={fileName || url || ""}
+          value={fileName || url || ""}dw
           onChange={onChange}
           afterInput={
             <>
@@ -120,12 +120,12 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
           description={
             <FormattedMessage
               id="object-url-modal.url-field-description"
-              defaultMessage="Accepts glb, png, jpg, gif, mp4, and mp3 files"
+              defaultMessage="Aceita arquivos glb, png, jpg, gif, mp4, e mp3."
             />
           }
         />
         <Button type="submit" preset="accept">
-          <FormattedMessage id="object-url-modal.create-object-button" defaultMessage="Create Object" />
+          <FormattedMessage id="object-url-modal.create-object-button" defaultMessage="Criar Objeto" />
         </Button>
       </Column>
     </Modal>

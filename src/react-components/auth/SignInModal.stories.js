@@ -86,7 +86,7 @@ export const RoomWaitForVerification = () => (
   <RoomLayout
     modal={
       <SignInModal closeable>
-        <WaitForVerification email="example@example.com" showNewsletterSignup />
+        <WaitForVerification email="exemplo@exemplo.com" showNewsletterSignup />
       </SignInModal>
     }
   />
@@ -96,7 +96,7 @@ export const RoomWaitForVerificationNoNewsletterSignup = () => (
   <RoomLayout
     modal={
       <SignInModal closeable>
-        <WaitForVerification email="example@example.com" />
+        <WaitForVerification email="exemplo@exemplo.com" />
       </SignInModal>
     }
   />
