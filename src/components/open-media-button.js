@@ -3,6 +3,44 @@ import { guessContentType } from "../utils/media-url-utils";
 import { handleExitTo2DInterstitial } from "../utils/vr-interstitial";
 import { changeHub } from "../change-hub";
 
+const spawnIframe = (src) => {
+  const body = document.querySelector('body')
+
+  const ifrModal = document.createElement('div')
+  ifrModal.classList.add('ifrModal')
+  ifrModal.style.position = 'absolute'
+  ifrModal.style.height = '80vh'
+  ifrModal.style.width = '70vw'
+  ifrModal.style.margin = '0 auto'
+  ifrModal.style.left = '0'
+  ifrModal.style.right = '0'
+  ifrModal.style.top = '10px'
+  ifrModal.style.backgroundColor = '#000'
+  ifrModal.style.display = 'flex'
+  ifrModal.style.flexDirection = 'row'
+  ifrModal.style.alignItems = 'start'
+  ifrModal.style.borderRadius = '15px'
+
+  const closeBtn = document.createElement('p')
+  closeBtn.innerText = 'X'
+  closeBtn.style.margin = '5px 10px 0 10px'
+  closeBtn.style.cursor = 'pointer'
+  closeBtn.onclick = () => { document.querySelector('.ifrModal').remove() }
+
+  const iframe = document.createElement('iframe')
+  iframe.setAttribute('src', `${src}`)
+  iframe.style.height = '80vh'
+  iframe.style.width = '70vw'
+  iframe.style.border = '0'
+  iframe.style.borderBottomRightRadius = '15px'
+  iframe.style.borderTopRightRadius = '15px'
+
+  ifrModal.appendChild(closeBtn)
+  ifrModal.appendChild(iframe)
+
+  body.appendChild(ifrModal)
+ }
+
 AFRAME.registerComponent("open-media-button", {
   schema: {
     onlyOpenLink: { type: "boolean" }
@@ -48,7 +86,8 @@ AFRAME.registerComponent("open-media-button", {
       let hubId;
       if (this.data.onlyOpenLink) {
         await exitImmersive();
-        window.open(this.src);
+        // window.open(this.src);
+        spawnIframe(this.src)
       } else if (await isLocalHubsAvatarUrl(this.src)) {
         const avatarId = new URL(this.src).pathname.split("/").pop();
         window.APP.store.update({ profile: { avatarId } });

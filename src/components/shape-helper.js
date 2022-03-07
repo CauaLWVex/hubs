@@ -57,6 +57,7 @@ AFRAME.registerComponent("shape-helper", {
     }
     if (this.data.fit === FIT.ALL) {
       if (!this.el.object3DMap.mesh) {
+        console.log('Pré erro > ' + this.el.object3DMap.mesh)
         console.error("Cannot use FIT.ALL without object3DMap.mesh");
         return;
       }

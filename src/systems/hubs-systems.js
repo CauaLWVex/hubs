@@ -93,7 +93,6 @@ AFRAME.registerSystem("hubs-systems", {
     this.emojiSystem.tick(t, systems.userinput);
     this.cursorPoseTrackingSystem.tick();
     this.cursorTargettingSystem.tick(t);
-    this.hoverMenuSystem.tick();
     this.positionAtBorderSystem.tick();
     this.scaleInScreenSpaceSystem.tick();
     this.constraintsSystem.tick();
@@ -102,6 +101,7 @@ AFRAME.registerSystem("hubs-systems", {
     this.holdableButtonSystem.tick();
     this.hoverButtonSystem.tick();
     this.drawingMenuSystem.tick();
+    this.hoverMenuSystem.tick();
     this.hapticFeedbackSystem.tick(
       this.twoPointStretchingSystem,
       this.singleActionButtonSystem.didInteractLeftThisFrame,

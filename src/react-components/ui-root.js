@@ -77,6 +77,7 @@ import { ObjectMenuContainer } from "./room/ObjectMenuContainer";
 import { useCssBreakpoints } from "react-use-css-breakpoints";
 import { PlacePopoverContainer } from "./room/PlacePopoverContainer";
 import { SharePopoverContainer } from "./room/SharePopoverContainer";
+import { GuideButtonContainer } from "./room/GuideButtonContainer";
 import { VoiceButtonContainer } from "./room/VoiceButtonContainer";
 import { ReactionPopoverContainer } from "./room/ReactionPopoverContainer";
 import { SafariMicModal } from "./room/SafariMicModal";
@@ -1107,8 +1108,8 @@ class UIRoot extends Component {
       {
         id: "user",
         label:
-          "You" +
-          (this.state.signedIn ? ` (Signed in as: ${maskEmail(this.props.store.state.credentials.email)})` : ""),
+          "Você" +
+          (this.state.signedIn ? ` (Entrou como: ${maskEmail(this.props.store.state.credentials.email)})` : ""),
         items: [
           this.state.signedIn
             ? {
@@ -1527,11 +1528,14 @@ class UIRoot extends Component {
                 }
                 modal={this.state.dialog}
                 toolbarLeft={
+                  <>
+                  <GuideButtonContainer/>
                   <InvitePopoverContainer
                     hub={this.props.hub}
                     hubChannel={this.props.hubChannel}
                     scene={this.props.scene}
                   />
+                  </>
                 }
                 toolbarCenter={
                   <>
