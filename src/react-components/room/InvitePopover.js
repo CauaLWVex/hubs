@@ -9,7 +9,7 @@ import { Column } from "../layout/Column";
 import { InviteLinkInputField } from "./InviteLinkInputField";
 import { FormattedMessage, defineMessage, useIntl } from "react-intl";
 
-function InvitePopoverContent({ url, shortUrl, code, embed, inviteRequired, fetchingInvite, inviteUrl, revokeInvite }) {
+function InvitePopoverContent({ url, embed, inviteRequired, fetchingInvite, inviteUrl, revokeInvite }) {
   return (
     <Column center padding grow gap="lg" className={styles.invitePopover}>
       {inviteRequired ? (
@@ -24,6 +24,7 @@ function InvitePopoverContent({ url, shortUrl, code, embed, inviteRequired, fetc
             buttonPreset="accent3"
           />
           <CopyableTextInputField
+<<<<<<< HEAD
             label={<FormattedMessage id="invite-popover.room-code" defaultMessage="Código da Sala" />}
             value={code}
             buttonPreset="accent4"
@@ -38,6 +39,9 @@ function InvitePopoverContent({ url, shortUrl, code, embed, inviteRequired, fetc
           />
           <CopyableTextInputField
             label={<FormattedMessage id="invite-popover.embed-code" defaultMessage="Código Embedado" />}
+=======
+            label={<FormattedMessage id="invite-popover.embed-code" defaultMessage="Embed Code" />}
+>>>>>>> upstream/hubs-cloud
             value={embed}
             buttonPreset="accent5"
           />
@@ -48,9 +52,7 @@ function InvitePopoverContent({ url, shortUrl, code, embed, inviteRequired, fetc
 }
 
 InvitePopoverContent.propTypes = {
-  shortUrl: PropTypes.string,
   url: PropTypes.string.isRequired,
-  code: PropTypes.string.isRequired,
   embed: PropTypes.string.isRequired,
   inviteRequired: PropTypes.bool,
   fetchingInvite: PropTypes.bool,
@@ -64,9 +66,7 @@ const invitePopoverTitle = defineMessage({
 });
 
 export function InvitePopoverButton({
-  shortUrl,
   url,
-  code,
   embed,
   initiallyVisible,
   popoverApiRef,
@@ -84,9 +84,7 @@ export function InvitePopoverButton({
       title={title}
       content={() => (
         <InvitePopoverContent
-          shortUrl={shortUrl}
           url={url}
-          code={code}
           embed={embed}
           inviteRequired={inviteRequired}
           fetchingInvite={fetchingInvite}
