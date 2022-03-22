@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { ReactComponent as PaperIcon } from "../icons/TextDocument.svg";
+import { ReactComponent as TotIcon } from "../icons/totLogo.svg";
 import { ToolbarButton } from "../input/ToolbarButton";
 import { FormattedMessage } from "react-intl";
 
@@ -29,7 +29,7 @@ export function GuideButtonContainer({ }) {
     closeBtn.onclick = () => { document.querySelector('.ifrModal').remove() }
 
     const iframe = document.createElement('iframe')
-    iframe.setAttribute('src', 'https://rise.articulate.com/share/HuugZdrbH3vEb8jF3SsXDsNM6tt7jyqx#/lessons/KtmcmXoBDjzFR_n9zNG50H8ux_PRGpmi')
+    iframe.setAttribute('src', 'https://toteduca.com.br/')
     iframe.style.height = '80vh'
     iframe.style.width = '70vw'
     iframe.style.border = '0'
@@ -44,8 +44,8 @@ export function GuideButtonContainer({ }) {
 
   return (
     <ToolbarButton
-      icon={<PaperIcon/>}
-      label={<FormattedMessage id="guide-button-container.label" defaultMessage="Guia" />}
+      icon={<TotIcon/>}
+      label={<FormattedMessage id="guide-button-container.label" defaultMessage="TOT" />}
       preset="basic"
       onClick={ () => { spawnIframe() } }
     />

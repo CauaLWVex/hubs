@@ -1529,7 +1529,7 @@ class UIRoot extends Component {
                 modal={this.state.dialog}
                 toolbarLeft={
                   <>
-                  <GuideButtonContainer/>
+                  {/* <GuideButtonContainer/> */}
                   <InvitePopoverContainer
                     hub={this.props.hub}
                     hubChannel={this.props.hubChannel}
