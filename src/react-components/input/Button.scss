@@ -334,23 +334,31 @@
 }
 
 :local(.signin) {
-  border: 2px solid #007AB8;
+  border: 2px solid #C7C7C8;
   background-color: transparent;
-  color: #007AB8;
+  color: #C7C7C8;
   box-sizing: border-box;
   border-radius: 13px;
 }
 
+:local(.signin:hover) {
+  color: #BCBCCE;
+}
+
+:local(.signin:active) {
+  color: #BCBCCE;
+}
+
 :local(.landing) {
-  border: 2px solid #007AB8;
-  background-color: #007AB8; 
+  border: 2px solid #2ba9cb;
+  background-color: #2ba9cb; 
   color: theme.$text5-color;
   box-sizing: border-box;
   border-radius: 13px;
   &:hover {
-    background-color: #008bd1;
+    background-color: #47b2cf;
   }
   &:active {
-    background-color: #00699E;
+    background-color: #47b2cf;
   }
 }

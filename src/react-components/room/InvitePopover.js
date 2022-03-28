@@ -24,7 +24,6 @@ function InvitePopoverContent({ url, embed, inviteRequired, fetchingInvite, invi
             buttonPreset="accent3"
           />
           <CopyableTextInputField
-<<<<<<< HEAD
             label={<FormattedMessage id="invite-popover.room-code" defaultMessage="Código da Sala" />}
             value={code}
             buttonPreset="accent4"
@@ -39,9 +38,6 @@ function InvitePopoverContent({ url, embed, inviteRequired, fetchingInvite, invi
           />
           <CopyableTextInputField
             label={<FormattedMessage id="invite-popover.embed-code" defaultMessage="Código Embedado" />}
-=======
-            label={<FormattedMessage id="invite-popover.embed-code" defaultMessage="Embed Code" />}
->>>>>>> upstream/hubs-cloud
             value={embed}
             buttonPreset="accent5"
           />

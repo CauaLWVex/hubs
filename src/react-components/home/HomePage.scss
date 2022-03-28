@@ -34,12 +34,13 @@
 }
 
 :local(.sign-in-container) {
+  margin-right: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
   @media(min-width: theme.$breakpoint-lg) {
-    display: none;
+    // display: none;
   }
 }
 
@@ -150,7 +151,7 @@
 }
 
 :local(.rooms-container) {
-  margin-top: 120px !important;
+  // margin-top: 120px !important;
   display: flex;
   flex-direction: column;
 }
@@ -162,8 +163,11 @@
 }
  
 :local(.rooms) {
-  background-color: theme.$background2-color;
+  // background-color: theme.$background2-color;
   border-radius: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 
 :local(.row) {
